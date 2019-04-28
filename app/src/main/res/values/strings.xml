@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DeTodoAqui</string>
+    <string name="nav_profile_title">Perfil</string>
+    <string name="nav_search_title">Buscar</string>
+    <string name="nav_activity_title">Actividad</string>
+
+</resources>
