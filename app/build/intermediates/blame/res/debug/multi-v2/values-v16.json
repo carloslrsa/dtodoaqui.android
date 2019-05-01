@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Billy\\Documents\\Projects Android\\DeTodoAqui\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "E:\\Proyectos\\AndroidProjects\\dtodoaqui\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Billy\\.gradle\\caches\\transforms-2\\files-2.1\\4f3bb4dc71883b4b48ec4a9fdb801e41\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\CARLOS\\.gradle\\caches\\transforms-2\\files-2.1\\9f00f57d2afc4ab83f8401a9323aad11\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Billy\\.gradle\\caches\\transforms-2\\files-2.1\\8e58b31977219d1fc2276187c3760961\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\CARLOS\\.gradle\\caches\\transforms-2\\files-2.1\\4b858fab291236726bb5ea6d6d856fd5\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
