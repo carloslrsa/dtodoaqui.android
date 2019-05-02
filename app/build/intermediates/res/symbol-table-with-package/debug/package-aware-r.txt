@@ -35,6 +35,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array categories_array
 attr action
 attr actionBarDivider
 attr actionBarItemBackground
@@ -1122,6 +1123,7 @@ id actions
 id activity_chooser_view_content
 id activity_dest
 id add
+id age
 id alertTitle
 id all
 id always
@@ -1131,6 +1133,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id button3
 id buttonPanel
 id cancel_action
 id center
@@ -1159,7 +1162,6 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
-id editText
 id edit_query
 id end
 id end_padder
@@ -1203,6 +1205,7 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id name
 id nav_controller_view_tag
 id nav_graph
 id nav_host_fragment
@@ -1261,6 +1264,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id spinner
 id split_action_bar
 id spread
 id spread_inside
@@ -1284,10 +1288,11 @@ id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id text
 id text2
+id textInputLayout
+id textInputLayout2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textView
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1376,6 +1381,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout establecimiento_cardview
 layout fragment_activity
 layout fragment_profile
 layout fragment_search
