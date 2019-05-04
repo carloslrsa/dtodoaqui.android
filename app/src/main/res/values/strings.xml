@@ -10,5 +10,6 @@
         <item>Restaurante</item>
         <item>Hotel</item>
     </string-array>
+    <string name="title_activity_establishments">EstablishmentsActivity</string>
 
 </resources>

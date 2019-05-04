@@ -22,6 +22,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="com.miedo.detodoaqui.EstablishmentsActivity"
+            android:label="@string/title_activity_establishments"
+            android:parentActivityName="com.miedo.detodoaqui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.miedo.detodoaqui.MainActivity" />
+        </activity>
+        <activity
             android:name="com.miedo.detodoaqui.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
