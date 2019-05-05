@@ -14,10 +14,19 @@
         android:id="@+id/profile_dest"
         android:name="com.miedo.detodoaqui.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile_to_establishments"
+            app:destination="@id/establishments_dest" />
+    </fragment>
     <fragment
         android:id="@+id/activity_dest"
         android:name="com.miedo.detodoaqui.ActivityFragment"
         android:label="fragment_activity"
         tools:layout="@layout/fragment_activity" />
+    <activity
+        android:id="@+id/establishments_dest"
+        android:name="com.miedo.detodoaqui.EstablishmentsActivity"
+        android:label="activity_establishments"
+        tools:layout="@layout/activity_establishments" />
 </navigation>
