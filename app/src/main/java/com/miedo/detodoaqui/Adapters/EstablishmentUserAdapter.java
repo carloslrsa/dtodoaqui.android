@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.miedo.detodoaqui.Data.EstablishmentUser;
 import com.miedo.detodoaqui.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -40,7 +41,7 @@ public class EstablishmentUserAdapter extends RecyclerView.Adapter<Establishment
         holder.tv_title.setText(mValues.get(position).getTitle());
         holder.tv_number_reviews.setText(String.valueOf(mValues.get(position).getReviews()));
         holder.rb_rating.setRating( mValues.get(position).getRating());
-
+        Picasso.get().load(mValues.get(position).getUrlImage()).into(holder.iv_picture);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override

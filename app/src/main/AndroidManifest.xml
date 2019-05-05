@@ -4,6 +4,7 @@
     package="com.miedo.detodoaqui">
 
     <dist:module dist:instant="true" />
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -13,6 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".CreateEstablishmentActivity"></activity>
         <activity
             android:name=".EstablishmentsActivity"
             android:label="@string/title_activity_establishments"

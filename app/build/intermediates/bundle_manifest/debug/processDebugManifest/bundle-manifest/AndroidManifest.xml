@@ -23,6 +23,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.miedo.detodoaqui.CreateEstablishmentActivity" />
         <activity
             android:name="com.miedo.detodoaqui.EstablishmentsActivity"
             android:label="@string/title_activity_establishments"

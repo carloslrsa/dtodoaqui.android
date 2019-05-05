@@ -21,7 +21,7 @@
         <ImageView
             android:id="@+id/iv_entablishment_picture"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="110dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="centerCrop"
             card_view:layout_constraintEnd_toEndOf="parent"
@@ -37,6 +37,7 @@
             android:background="@drawable/gradient_background"
             android:padding="8dp"
             android:text="La tiendita de don Pepe"
+            android:textSize="15sp"
             android:textColor="#FFFFFF"
             card_view:layout_constraintBottom_toBottomOf="@+id/iv_entablishment_picture"
             card_view:layout_constraintEnd_toEndOf="parent"
@@ -49,8 +50,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:padding="8dp"
+            android:padding="6dp"
             android:text="12"
+            android:textSize="14sp"
             card_view:layout_constraintStart_toEndOf="@+id/imageView"
             card_view:layout_constraintTop_toBottomOf="@+id/iv_entablishment_picture" />
 
