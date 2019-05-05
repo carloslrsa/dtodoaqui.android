@@ -11,7 +11,7 @@ import com.miedo.detodoaqui.R;
 
 public class EstablecimientoAdapter extends RecyclerView.Adapter<EstablecimientoAdapter.EstablecimientoViewHolder>  {
 
-    List<>
+    //List<>
 
     @NonNull
     @Override
@@ -23,12 +23,12 @@ public class EstablecimientoAdapter extends RecyclerView.Adapter<Establecimiento
 
     @Override
     public void onBindViewHolder(@NonNull EstablecimientoViewHolder holder, int position) {
-        studentData data=studentDataList.get(i);
+        /*studentData data=studentDataList.get(i);
         Random rnd = new Random();
         int currentColor = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
         viewHolder.parent.setBackgroundColor(currentColor);
         viewHolder.name.setText(data.name);
-        viewHolder.age.setText(String.valueOf(data.age));
+        viewHolder.age.setText(String.valueOf(data.age));*/
     }
 
     @Override
