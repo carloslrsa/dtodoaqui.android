@@ -12,4 +12,9 @@ public class ProfileFragmentDirections {
   public static NavDirections actionProfileToEstablishments() {
     return new ActionOnlyNavDirections(R.id.action_profile_to_establishments);
   }
+
+  @NonNull
+  public static NavDirections actionProfileDestToRegisterUserActivity() {
+    return new ActionOnlyNavDirections(R.id.action_profile_dest_to_registerUserActivity);
+  }
 }

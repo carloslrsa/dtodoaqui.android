@@ -23,6 +23,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.miedo.detodoaqui.RegisterUserActivity"
+            android:label="@string/title_activity_register_user"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.miedo.detodoaqui.CreateEstablishmentActivity" />
         <activity
             android:name="com.miedo.detodoaqui.EstablishmentsActivity"

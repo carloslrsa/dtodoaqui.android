@@ -3,11 +3,14 @@ package com.miedo.detodoaqui;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
+import android.inputmethodservice.Keyboard;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,9 +24,11 @@ import android.view.ViewTreeObserver;
 import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Transformation;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,10 +36,12 @@ import android.widget.Toast;
 import com.google.android.material.textfield.TextInputLayout;
 import com.miedo.detodoaqui.Adapters.EstablishmentSearchAdapter;
 import com.miedo.detodoaqui.Adapters.EstablishmentUserAdapter;
+import com.miedo.detodoaqui.Data.EstablishmentSearch;
 import com.miedo.detodoaqui.Viewmodels.EstablishmentsSearchViewModel;
 
 import org.w3c.dom.Text;
 
+import java.util.List;
 import java.util.Timer;
 
 public class SearchFragment extends Fragment {
@@ -48,6 +55,7 @@ public class SearchFragment extends Fragment {
     private Spinner categoriesSearchParam;
     private Button searchButton;
     private Button colapseButton;
+    private ProgressBar progressSearchBar;
 
     private RecyclerView establishmentsSearchResult;
 
@@ -69,7 +77,7 @@ public class SearchFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_search, container, false);
+        final View view = inflater.inflate(R.layout.fragment_search, container, false);
 
         searchLayout = view.findViewById(R.id.searchLayout);
         keywordSearchParam = (EditText) view.findViewById(R.id.keywordSearchET);
@@ -77,13 +85,27 @@ public class SearchFragment extends Fragment {
         categoriesSearchParam = (Spinner) view.findViewById(R.id.categoriesSearchSpinner);
         searchButton = (Button) view.findViewById(R.id.searchButton);
         colapseButton = (Button) view.findViewById(R.id.colapseButton);
+        progressSearchBar = (ProgressBar) view.findViewById(R.id.progressSearchBar);
 
+
+        viewModel.getSearchData().observe(this, new Observer<List<EstablishmentSearch>>() {
+            @Override
+            public void onChanged(List<EstablishmentSearch> establishmentSearches) {
+                progressSearchBar.setVisibility(View.GONE);
+                establishmentsSearchResult.setAdapter(new EstablishmentSearchAdapter(establishmentSearches, getContext()));
+            }
+        });
 
         //Listeners
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                hideKeyboard();
                 collapseSearchLayout(300);
+                establishmentsSearchResult.setAdapter(null);
+                progressSearchBar.setVisibility(View.VISIBLE);
+                //Búsqueda
+                viewModel.SearchEstablishments(keywordSearchParam.getText().toString(),locationSearchParam.getText().toString(),"");
             }
         });
         colapseButton.setOnClickListener(new View.OnClickListener() {
@@ -97,20 +119,41 @@ public class SearchFragment extends Fragment {
                 }
             }
         });
+        keywordSearchParam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                expandSearchLayout(300);
+            }
+        });
 
         establishmentsSearchResult = (RecyclerView) view.findViewById(R.id.establishmentsSearchRV);
 
         establishmentsSearchResult.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
-        establishmentsSearchResult.setAdapter(new EstablishmentSearchAdapter(viewModel.getData(), getContext()));
 
 
         return view;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        keywordSearchParam.requestFocus();
+    }
     //Utilities
 
-    public static int dpToPx(int dp) {
+    public int dpToPx(int dp) {
         return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
+    }
+
+    public void hideKeyboard(){
+        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Activity.INPUT_METHOD_SERVICE);
+        //Find the currently focused view, so we can grab the correct window token from it.
+        View view = getActivity().getCurrentFocus();
+        //If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view == null) {
+            view = new View(getActivity());
+        }
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
 

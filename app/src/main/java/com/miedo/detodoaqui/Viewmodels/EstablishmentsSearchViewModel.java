@@ -1,29 +1,51 @@
 package com.miedo.detodoaqui.Viewmodels;
 
+import android.os.AsyncTask;
+
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.miedo.detodoaqui.Data.EstablishmentSearch;
+import com.miedo.detodoaqui.Models.EstablishmentsSearchModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class EstablishmentsSearchViewModel extends ViewModel {
-    private ArrayList<EstablishmentSearch> data;
+    private MutableLiveData<List<EstablishmentSearch>> data = new MutableLiveData<List<EstablishmentSearch>>();
+    private EstablishmentsSearchModel model = new EstablishmentsSearchModel();
 
     public EstablishmentsSearchViewModel() {
-        init();
     }
 
-    private void init() {
-        data = new ArrayList<>();
-        data.add(new EstablishmentSearch("La tiendita de don pepe", "Av. holi 124", "https://www.chiquipedia.com/imagenes/imagenes-amor02.jpg",5));
-        data.add(new EstablishmentSearch("Pollería", "Av. holi 124", "https://www.chiquipedia.com/imagenes/animo01.jpg",4));
-        data.add(new EstablishmentSearch("Esta es una prueba", "Av. holi 124", "https://www.chiquipedia.com/imagenes/imagenes-san-valentin18.jpg",3.5f));
-        data.add(new EstablishmentSearch("Casa de Coco", "Av. holi 124", "https://www.chiquipedia.com/imagenes/imagenes-animo10.jpg",1));
-        data.add(new EstablishmentSearch("Patio de SMAAAAAAAAASH", "Av. holi 124", "https://www.chiquipedia.com/imagenes/imagenes-frases05.jpg",4.5f));
+    public void SearchEstablishments(final String keyword, final String location, final String category){
+        /*Se llama al Model*/
+        new SearchTask().execute(new String[]{keyword,location,category});
     }
 
-    public List<EstablishmentSearch> getData() {
+    public LiveData<List<EstablishmentSearch>> getSearchData() {
         return data;
+    }
+
+
+    //Test
+    private class SearchTask extends AsyncTask<String,Void,String[]>{
+
+        @Override
+        protected String[] doInBackground(String... strings) {
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return strings;
+
+        }
+
+        @Override
+        protected void onPostExecute(String[] strings) {
+            data.setValue(model.SearchEstablishments(strings[0],strings[1],strings[2]));
+        }
     }
 }
