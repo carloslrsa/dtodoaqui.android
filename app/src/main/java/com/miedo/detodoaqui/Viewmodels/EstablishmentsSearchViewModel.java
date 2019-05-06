@@ -23,7 +23,6 @@ public class EstablishmentsSearchViewModel extends ViewModel {
         data.add(new EstablishmentSearch("Patio de SMAAAAAAAAASH", "Av. holi 124", "https://www.chiquipedia.com/imagenes/imagenes-frases05.jpg",4.5f));
     }
 
-
     public List<EstablishmentSearch> getData() {
         return data;
     }

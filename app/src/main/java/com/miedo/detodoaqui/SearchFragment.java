@@ -1,5 +1,7 @@
 package com.miedo.detodoaqui;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.Resources;
@@ -37,7 +39,7 @@ import java.util.Timer;
 
 public class SearchFragment extends Fragment {
 
-    private final int searchContainerColapsedHeight = 75;
+    private final int searchContainerColapsedHeight = 85;
     private final int searchContainerExpandedHeight = 275;
 
     private LinearLayout searchLayout;
@@ -81,7 +83,7 @@ public class SearchFragment extends Fragment {
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                collapseSearchLayout(300);
             }
         });
         colapseButton.setOnClickListener(new View.OnClickListener() {
@@ -92,9 +94,7 @@ public class SearchFragment extends Fragment {
 
                 }else {
                     collapseSearchLayout(300);
-
                 }
-                colapsed = !colapsed;
             }
         });
 
@@ -116,41 +116,64 @@ public class SearchFragment extends Fragment {
 
     //Animations
     public void expandSearchLayout(int duration) {
-        int prevHeight  = searchLayout.getHeight();
-        //int targetHeight = dpToPx(searchContainerExpandedHeight);
-        searchLayout.measure(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        int targetHeight = searchLayout.getMeasuredHeight();
-        //targetHeight = dpToPx(targetHeight);
+        if(colapsed) {
+            int prevHeight = searchLayout.getHeight();
+            int targetHeight = dpToPx(searchContainerExpandedHeight);
+            /*searchLayout.measure(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            int targetHeight = searchLayout.getMeasuredHeight();*/
 
-        searchLayout.setVisibility(View.VISIBLE);
-        ValueAnimator valueAnimator = ValueAnimator.ofInt(prevHeight, targetHeight);
-        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                searchLayout.getLayoutParams().height = (int) animation.getAnimatedValue();
-                searchLayout.requestLayout();
-            }
-        });
-        valueAnimator.setInterpolator(new DecelerateInterpolator());
-        valueAnimator.setDuration(duration);
-        valueAnimator.start();
+            searchLayout.setVisibility(View.VISIBLE);
+            ValueAnimator valueAnimator = ValueAnimator.ofInt(prevHeight, targetHeight);
+            valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                @Override
+                public void onAnimationUpdate(ValueAnimator animation) {
+                    searchLayout.getLayoutParams().height = (int) animation.getAnimatedValue();
+                    searchLayout.requestLayout();
+                }
+            });
+            valueAnimator.addListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    colapseButton.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, R.drawable.ic_arrow_up);
+                }
+
+                @Override
+                public void onAnimationStart(Animator animation) {
+                    locationSearchParam.setVisibility(View.VISIBLE);
+                }
+            });
+            valueAnimator.setInterpolator(new DecelerateInterpolator());
+            valueAnimator.setDuration(duration);
+            valueAnimator.start();
+            colapsed = false;
+        }
     }
 
     public void collapseSearchLayout(int duration) {
-        int prevHeight  = searchLayout.getHeight();
-        int targetHeight = dpToPx(searchContainerColapsedHeight);
+        if(!colapsed){
+            int prevHeight  = searchLayout.getHeight();
+            int targetHeight = dpToPx(searchContainerColapsedHeight);
 
-        ValueAnimator valueAnimator = ValueAnimator.ofInt(prevHeight, targetHeight);
-        valueAnimator.setInterpolator(new DecelerateInterpolator());
-        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                searchLayout.getLayoutParams().height = (int) animation.getAnimatedValue();
-                searchLayout.requestLayout();
-            }
-        });
-        valueAnimator.setInterpolator(new DecelerateInterpolator());
-        valueAnimator.setDuration(duration);
-        valueAnimator.start();
+            ValueAnimator valueAnimator = ValueAnimator.ofInt(prevHeight, targetHeight);
+            valueAnimator.setInterpolator(new DecelerateInterpolator());
+            valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                @Override
+                public void onAnimationUpdate(ValueAnimator animation) {
+                    searchLayout.getLayoutParams().height = (int) animation.getAnimatedValue();
+                    searchLayout.requestLayout();
+                }
+            });
+            valueAnimator.addListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    colapseButton.setCompoundDrawablesWithIntrinsicBounds( 0, 0, 0 ,R.drawable.ic_arrow_down);
+                    locationSearchParam.setVisibility(View.INVISIBLE);
+                }
+            });
+            valueAnimator.setInterpolator(new DecelerateInterpolator());
+            valueAnimator.setDuration(duration);
+            valueAnimator.start();
+            colapsed = true;
+        }
     }
 }
