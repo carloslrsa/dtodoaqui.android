@@ -1041,6 +1041,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable edit_round
+drawable edit_round_big
 drawable gradient_background
 drawable ic_add
 drawable ic_arrow_down
@@ -1184,6 +1185,7 @@ id dimensions
 id dirEstTextView
 id direct
 id disableHome
+id editText2
 id edit_query
 id end
 id end_padder
@@ -1207,6 +1209,9 @@ id ghost_view
 id gone
 id group_divider
 id groups
+id hint_city
+id hint_country
+id hint_district
 id home
 id homeAsUp
 id icon
@@ -1249,6 +1254,8 @@ id nav_host_fragment
 id nav_view
 id navigation_header_container
 id never
+id nextButton
+id next_action
 id nomEstTextView
 id none
 id normal
@@ -1320,6 +1327,7 @@ id standard
 id start
 id status_bar_latest_event_content
 id stepOneFragment
+id stepTwoFragment
 id stretch
 id submenuarrow
 id submit_area
@@ -1339,6 +1347,7 @@ id textSpacerNoTitle
 id textStart
 id textView2
 id textView3
+id textView5
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1356,7 +1365,10 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tv_ciudad
+id tv_distrito
 id tv_number_reviews
+id tv_pais
 id tv_title_establishment
 id uniform
 id unlabeled
@@ -1438,6 +1450,7 @@ layout design_text_input_password_icon
 layout fragment_activity
 layout fragment_profile
 layout fragment_register_step1
+layout fragment_register_step2
 layout fragment_search
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include

@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavHost;
+import androidx.navigation.Navigation;
 
 import com.miedo.detodoaqui.Utils.MultiSpinner;
 
@@ -34,7 +36,12 @@ public class StepOneFragment extends Fragment implements MultiSpinner.MultiSpinn
         MultiSpinner multiSpinner = (MultiSpinner) view.findViewById(R.id.multispinner);
         multiSpinner.setItems(
                 Arrays.asList("Metalero", "Emo jarcor", "Otaco(agg)", "GAAAA"),
-                "GAAAAAAAAAAA", this);
+                "Selecciona una o más categorías",
+                "Categorías", this);
+
+        view.findViewById(R.id.nextButton).setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.next_action, null)
+        );
 
         return view;
     }
@@ -42,7 +49,8 @@ public class StepOneFragment extends Fragment implements MultiSpinner.MultiSpinn
     @Override
     public void onItemsSelected(boolean[] selected) {
 
-        Log.i(TAG, "GAAAAAAAAAAAAAAAAAAA");
+        Log.i(TAG, "Resultado");
+        Log.i(TAG, Arrays.toString(selected));
 
     }
 }

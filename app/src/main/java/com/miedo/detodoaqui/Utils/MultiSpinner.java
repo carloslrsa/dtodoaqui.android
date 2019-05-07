@@ -16,6 +16,7 @@ public class MultiSpinner extends AppCompatSpinner implements
     private List<String> items;
     private boolean[] selected;
     private String defaultText;
+    private String titleDialog;
     private MultiSpinnerListener listener;
 
     public MultiSpinner(Context context) {
@@ -42,26 +43,27 @@ public class MultiSpinner extends AppCompatSpinner implements
     public void onCancel(DialogInterface dialog) {
         // refresh text on spinner
         StringBuffer spinnerBuffer = new StringBuffer();
-        boolean someUnselected = false;
+        boolean someSelected = false;
         for (int i = 0; i < items.size(); i++) {
             if (selected[i] == true) {
                 spinnerBuffer.append(items.get(i));
                 spinnerBuffer.append(", ");
-            } else {
-                someUnselected = true;
+                someSelected = true;
             }
         }
         String spinnerText;
-        if (someUnselected) {
+        if (someSelected) {
             spinnerText = spinnerBuffer.toString();
             if (spinnerText.length() > 2)
                 spinnerText = spinnerText.substring(0, spinnerText.length() - 2);
+
         } else {
             spinnerText = defaultText;
         }
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(),
                 android.R.layout.simple_spinner_item,
-                new String[] { spinnerText });
+                new String[]{spinnerText});
         setAdapter(adapter);
         listener.onItemsSelected(selected);
     }
@@ -73,31 +75,34 @@ public class MultiSpinner extends AppCompatSpinner implements
                 items.toArray(new CharSequence[items.size()]), selected, this);
         builder.setPositiveButton(android.R.string.ok,
                 new DialogInterface.OnClickListener() {
-
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.cancel();
                     }
                 });
+
+        builder.setTitle(titleDialog);
+
         builder.setOnCancelListener(this);
         builder.show();
         return true;
     }
 
-    public void setItems(List<String> items, String allText,
+    public void setItems(List<String> items, String allText, String titleDialog,
                          MultiSpinnerListener listener) {
         this.items = items;
         this.defaultText = allText;
+        this.titleDialog = titleDialog;
         this.listener = listener;
 
         // all selected by default
         selected = new boolean[items.size()];
         for (int i = 0; i < selected.length; i++)
-            selected[i] = true;
+            selected[i] = false;
 
         // all text on the spinner
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(),
-                android.R.layout.simple_spinner_item, new String[] { allText });
+                android.R.layout.simple_spinner_item, new String[]{allText});
         setAdapter(adapter);
     }
 

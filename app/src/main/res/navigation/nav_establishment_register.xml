@@ -9,5 +9,19 @@
         android:id="@+id/stepOneFragment"
         android:name="com.miedo.detodoaqui.StepOneFragment"
         android:label="fragment_register_step1"
-        tools:layout="@layout/fragment_register_step1" />
+        tools:layout="@layout/fragment_register_step1">
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/stepTwoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        />
+    </fragment>
+    <fragment
+        android:id="@+id/stepTwoFragment"
+        android:name="com.miedo.detodoaqui.StepTwoFragment"
+        android:label="fragment_register_step2"
+        tools:layout="@layout/fragment_register_step2" />
 </navigation>
