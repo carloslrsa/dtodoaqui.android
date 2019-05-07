@@ -1042,6 +1042,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable edit_round
 drawable gradient_background
+drawable ic_add
 drawable ic_arrow_down
 drawable ic_arrow_up
 drawable ic_comment
@@ -1152,6 +1153,7 @@ id bt_establishments
 id bt_register
 id buttonPanel
 id cancel_action
+id card
 id card_view
 id categoriesSearchSpinner
 id center
@@ -1200,6 +1202,7 @@ id filled
 id fixed
 id forever
 id fotEstImageView
+id fragment
 id ghost_view
 id gone
 id group_divider
@@ -1221,6 +1224,7 @@ id keywordSearchET2
 id keywordSearchET3
 id keywordSearchET4
 id keywordSearchET5
+id keywordSearchET6
 id labeled
 id largeLabel
 id left
@@ -1237,6 +1241,7 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id multispinner
 id nav_controller_view_tag
 id nav_establishment
 id nav_graph
@@ -1314,6 +1319,7 @@ id src_over
 id standard
 id start
 id status_bar_latest_event_content
+id stepOneFragment
 id stretch
 id submenuarrow
 id submit_area
@@ -1331,6 +1337,8 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView2
+id textView3
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1406,9 +1414,9 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_create_establishment
 layout activity_establishments
 layout activity_main
+layout activity_register_establishment
 layout activity_register_user
 layout cardview_establishment_search
 layout cardview_establishment_user
@@ -1429,6 +1437,7 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_activity
 layout fragment_profile
+layout fragment_register_step1
 layout fragment_search
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
@@ -1454,7 +1463,7 @@ layout support_simple_spinner_dropdown_item
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
-navigation nav_establishment
+navigation nav_establishment_register
 navigation nav_graph
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -1517,6 +1526,7 @@ string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_establishments
+string title_activity_register_establishment
 string title_activity_register_user
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

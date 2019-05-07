@@ -3,46 +3,31 @@ package com.miedo.detodoaqui;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
-import android.app.Activity;
-import android.content.Context;
 import android.content.res.Resources;
-import android.inputmethodservice.Keyboard;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.util.Log;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
-import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
-import android.view.animation.Transformation;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputLayout;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.miedo.detodoaqui.Adapters.EstablishmentSearchAdapter;
-import com.miedo.detodoaqui.Adapters.EstablishmentUserAdapter;
 import com.miedo.detodoaqui.Data.EstablishmentSearch;
 import com.miedo.detodoaqui.Viewmodels.EstablishmentsSearchViewModel;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
-import java.util.Timer;
 
 public class SearchFragment extends Fragment {
 
@@ -146,7 +131,7 @@ public class SearchFragment extends Fragment {
     }
 
     public void hideKeyboard(){
-        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Activity.INPUT_METHOD_SERVICE);
+        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(AppCompatActivity.INPUT_METHOD_SERVICE);
         //Find the currently focused view, so we can grab the correct window token from it.
         View view = getActivity().getCurrentFocus();
         //If no view currently has focus, create a new one, just so we can grab a window token from it

@@ -13,4 +13,6 @@
     <string name="title_activity_establishments">EstablishmentsActivity</string>
     <string name="title_activity_register_user">RegisterUserActivity</string>
 
+    <string name="title_activity_register_establishment">RegisterEstablismentActivity</string>
+
 </resources>
