@@ -619,6 +619,7 @@ color abc_tint_spinner
 color abc_tint_switch_track
 color accent_material_dark
 color accent_material_light
+color backgroundColor
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -636,6 +637,7 @@ color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
 color colorAccent
+color colorButtonAccent
 color colorPrimary
 color colorPrimaryDark
 color design_bottom_navigation_shadow_color
@@ -722,6 +724,7 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color textColorOptional
 color tooltip_background_dark
 color tooltip_background_light
 dimen abc_action_bar_content_inset_material
@@ -1032,8 +1035,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable background_preview
 drawable button_round
-drawable circle_background
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1043,6 +1046,9 @@ drawable design_snackbar_background
 drawable edit_round
 drawable edit_round_big
 drawable gradient_background
+drawable gradient_blue
+drawable gradient_gray
+drawable gradient_green
 drawable ic_add
 drawable ic_arrow_down
 drawable ic_arrow_up
@@ -1154,7 +1160,6 @@ id bt_establishments
 id bt_register
 id buttonPanel
 id cancel_action
-id card
 id card_view
 id categoriesSearchSpinner
 id center
@@ -1224,6 +1229,8 @@ id invisible
 id italic
 id item_touch_helper_previous_elevation
 id iv_entablishment_picture
+id iv_fondo
+id iv_perfil
 id keywordSearchET
 id keywordSearchET2
 id keywordSearchET3
@@ -1255,6 +1262,8 @@ id nav_view
 id navigation_header_container
 id never
 id nextButton
+id nextButton2
+id nextButton3
 id next_action
 id nomEstTextView
 id none
@@ -1327,6 +1336,7 @@ id standard
 id start
 id status_bar_latest_event_content
 id stepOneFragment
+id stepThreeFragment
 id stepTwoFragment
 id stretch
 id submenuarrow
@@ -1345,8 +1355,10 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id textView2
 id textView3
+id textView4
 id textView5
 id text_input_password_toggle
 id textinput_counter
@@ -1374,6 +1386,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id view
 id view_offset_helper
 id visible
 id withText
@@ -1451,6 +1464,7 @@ layout fragment_activity
 layout fragment_profile
 layout fragment_register_step1
 layout fragment_register_step2
+layout fragment_register_step3
 layout fragment_search
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include

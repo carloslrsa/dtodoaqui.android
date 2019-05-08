@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -60,7 +61,24 @@ public class StepTwoFragment extends Fragment {
         hint_ciudad = view.findViewById(R.id.hint_city);
         hint_distrito = view.findViewById(R.id.hint_district);
 
-        tv_pais.setOnClickListener(new View.OnClickListener() {
+        // TODO: cambiar logica por defecto de navegacion
+        view.findViewById(R.id.nextButton).setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.next_action, null)
+        );
+
+        tv_pais.setOnClickListener(getListenerCountries());
+
+        tv_ciudad.setOnClickListener(getListenerCities());
+
+        tv_distrito.setOnClickListener(getListenerDistricts());
+
+
+        return view;
+
+    }
+
+    private View.OnClickListener getListenerCountries() {
+        return new View.OnClickListener() {
             final ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                     StepTwoFragment.this.getContext(), android.R.layout.simple_spinner_dropdown_item, countryValues);
 
@@ -81,9 +99,12 @@ public class StepTwoFragment extends Fragment {
                         }).create().show();
 
             }
-        });
+        };
+    }
 
-        tv_ciudad.setOnClickListener(new View.OnClickListener() {
+
+    private View.OnClickListener getListenerCities() {
+        return new View.OnClickListener() {
             final ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                     StepTwoFragment.this.getContext(), android.R.layout.simple_spinner_dropdown_item, cityValues);
 
@@ -104,10 +125,11 @@ public class StepTwoFragment extends Fragment {
                         }).create().show();
 
             }
-        });
+        };
+    }
 
-
-        tv_distrito.setOnClickListener(new View.OnClickListener() {
+    private View.OnClickListener getListenerDistricts() {
+        return new View.OnClickListener() {
             final ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                     StepTwoFragment.this.getContext(), android.R.layout.simple_spinner_dropdown_item, districtValues);
 
@@ -128,11 +150,7 @@ public class StepTwoFragment extends Fragment {
                         }).create().show();
 
             }
-        });
-
-
-        return view;
-
+        };
     }
 
 
