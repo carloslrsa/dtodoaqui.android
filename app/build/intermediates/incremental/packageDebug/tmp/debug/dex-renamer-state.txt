@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Sun May 05 18:40:32 COT 2019
+=======
+#Tue May 07 12:32:31 COT 2019
+>>>>>>> ba2c262796db46dc816a1bf0ec1363c8554f30f0
 path.1=classes.dex
 path.0=classes.dex
 renamed.10=classes11.dex
@@ -10,6 +14,7 @@ renamed.5=classes6.dex
 renamed.4=classes5.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
+<<<<<<< HEAD
 base.9=C\:\\Users\\Billy\\Documents\\AndroidProjects\\dtodoaqui.android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\20
 renamed.1=classes2.dex
 base.8=C\:\\Users\\Billy\\Documents\\AndroidProjects\\dtodoaqui.android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\19
@@ -23,6 +28,21 @@ base.2=C\:\\Users\\Billy\\Documents\\AndroidProjects\\dtodoaqui.android\\app\\bu
 base.1=C\:\\Users\\Billy\\Documents\\AndroidProjects\\dtodoaqui.android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
 base.0=C\:\\Users\\Billy\\Documents\\AndroidProjects\\dtodoaqui.android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
 base.10=C\:\\Users\\Billy\\Documents\\AndroidProjects\\dtodoaqui.android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\21
+=======
+base.9=C\:\\Users\\Billy\\Documents\\AndroidProjects\\ProyectoTaller\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\20
+renamed.1=classes2.dex
+base.8=C\:\\Users\\Billy\\Documents\\AndroidProjects\\ProyectoTaller\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\19
+renamed.0=classes.dex
+base.7=C\:\\Users\\Billy\\Documents\\AndroidProjects\\ProyectoTaller\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\18
+base.6=C\:\\Users\\Billy\\Documents\\AndroidProjects\\ProyectoTaller\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\17
+base.5=C\:\\Users\\Billy\\Documents\\AndroidProjects\\ProyectoTaller\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
+base.4=C\:\\Users\\Billy\\Documents\\AndroidProjects\\ProyectoTaller\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15
+base.3=C\:\\Users\\Billy\\Documents\\AndroidProjects\\ProyectoTaller\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
+base.2=C\:\\Users\\Billy\\Documents\\AndroidProjects\\ProyectoTaller\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
+base.1=C\:\\Users\\Billy\\Documents\\AndroidProjects\\ProyectoTaller\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
+base.0=C\:\\Users\\Billy\\Documents\\AndroidProjects\\ProyectoTaller\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
+base.10=C\:\\Users\\Billy\\Documents\\AndroidProjects\\ProyectoTaller\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\21
+>>>>>>> ba2c262796db46dc816a1bf0ec1363c8554f30f0
 path.10=classes.dex
 path.9=classes.dex
 path.8=classes.dex

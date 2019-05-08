@@ -18,6 +18,9 @@
         <action
             android:id="@+id/action_profile_to_establishments"
             app:destination="@id/establishments_dest" />
+        <action
+            android:id="@+id/action_profile_dest_to_registerUserActivity"
+            app:destination="@id/registeruser_dest" />
     </fragment>
     <fragment
         android:id="@+id/activity_dest"
@@ -29,4 +32,9 @@
         android:name="com.miedo.detodoaqui.EstablishmentsActivity"
         android:label="activity_establishments"
         tools:layout="@layout/activity_establishments" />
+    <activity
+        android:id="@+id/registeruser_dest"
+        android:name="com.miedo.detodoaqui.RegisterUserActivity"
+        android:label="activity_register_user"
+        tools:layout="@layout/activity_register_user" />
 </navigation>

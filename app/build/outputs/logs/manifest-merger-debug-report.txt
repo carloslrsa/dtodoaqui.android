@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:2:1-38:12
+ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:2:1-50:12
 MERGED from [androidx.navigation:navigation-fragment:2.1.0-alpha02] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\fe44389ac2a709fd1edd26b2ca1df8e0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui:2.1.0-alpha02] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\bb97152f36b2cc0fd02b7bc7beb3e763\AndroidManifest.xml:17:1-22:12
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\a7e014e433edf1014322bc991f2987ba\AndroidManifest.xml:2:1-14:12
@@ -48,35 +48,35 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Billy\.gradle\ca
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\c9904f361414d00268b051a9c75a6ddf\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\990f278443b699ff33a6d4aeb8d14dd8\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\10c81aae9036bc24eaea763d247aedb5\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:2:1-50:12
 	package
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:4:5-35
-		INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:4:5-35
+		INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:2:1-38:12
-		INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:2:1-50:12
+		INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml
 	xmlns:dist
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:3:5-61
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:3:5-61
 	android:versionCode
-		INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:2:1-38:12
-		INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:2:1-50:12
+		INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:2:11-69
 dist:module
-ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:6:5-40
+ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:6:5-40
 	dist:instant
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:6:18-37
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:6:18-37
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:8:5-67
+ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:8:5-67
 	android:name
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:8:22-64
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:8:22-64
 application
-ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:10:5-36:19
+ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:10:5-48:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\a7e014e433edf1014322bc991f2987ba\AndroidManifest.xml:7:5-12:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\a7e014e433edf1014322bc991f2987ba\AndroidManifest.xml:7:5-12:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0-alpha04] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\c141a88a8473bf69e6abd292c0f9d4ae\AndroidManifest.xml:22:5-23:19
@@ -94,57 +94,71 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha02] C:\
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0-alpha05] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\cb842097c0b88c0d11e5b541d8eb40b2\AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:13:9-41
 	android:roundIcon
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:14:9-54
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:14:9-54
 	android:icon
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:12:9-43
 	android:allowBackup
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:16:9-40
-activity#com.miedo.detodoaqui.CreateEstablishmentActivity
-ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:17:9-74
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:16:9-40
+activity#com.miedo.detodoaqui.RegisterUserActivity
+ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:17:9-20:68
+	android:label
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:19:13-65
+	android:theme
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:20:13-56
 	android:name
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:17:19-62
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:18:13-49
 activity#com.miedo.detodoaqui.EstablishmentsActivity
-ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:18:9-26:20
+ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:21:9-29:20
 	android:parentActivityName
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:21:13-55
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:24:13-55
 	android:label
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:20:13-66
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:23:13-66
 	android:theme
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:22:13-56
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:25:13-56
 	android:name
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:19:13-51
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:22:13-51
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:23:13-25:69
+ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:26:13-28:69
 	android:value
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:25:17-66
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:28:17-66
 	android:name
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:24:17-63
-activity#com.miedo.detodoaqui.MainActivity
-ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:27:9-35:20
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:27:17-63
+activity#com.miedo.detodoaqui.RegisterEstablishmentActivity
+ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:30:9-38:20
+	android:parentActivityName
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:33:13-65
 	android:label
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:29:13-45
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:32:13-74
+	android:theme
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:34:13-56
 	android:name
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:28:13-41
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:31:13-58
+activity#com.miedo.detodoaqui.MainActivity
+ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:39:9-47:20
+	android:label
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:41:13-45
+	android:name
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:40:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:30:13-34:29
+ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:42:13-46:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:31:17-69
+ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:43:17-69
 	android:name
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:31:25-66
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:43:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:33:17-77
+ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:45:17-77
 	android:name
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml:33:27-74
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml:45:27-74
 uses-sdk
-INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml
 MERGED from [androidx.navigation:navigation-fragment:2.1.0-alpha02] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\fe44389ac2a709fd1edd26b2ca1df8e0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-fragment:2.1.0-alpha02] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\fe44389ac2a709fd1edd26b2ca1df8e0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-ui:2.1.0-alpha02] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\bb97152f36b2cc0fd02b7bc7beb3e763\AndroidManifest.xml:20:5-44
@@ -233,16 +247,16 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\Billy\.gradle\caches\transform
 MERGED from [androidx.print:print:1.0.0] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\990f278443b699ff33a6d4aeb8d14dd8\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\10c81aae9036bc24eaea763d247aedb5\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\10c81aae9036bc24eaea763d247aedb5\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Billy\Documents\AndroidProjects\dtodoaqui.android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\src\main\AndroidManifest.xml
 provider#com.squareup.picasso.PicassoProvider
 ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\a7e014e433edf1014322bc991f2987ba\AndroidManifest.xml:8:9-11:40
 	android:authorities

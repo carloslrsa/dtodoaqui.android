@@ -14,7 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CreateEstablishmentActivity"></activity>
+        <activity
+            android:name=".RegisterUserActivity"
+            android:label="@string/title_activity_register_user"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".EstablishmentsActivity"
             android:label="@string/title_activity_establishments"
@@ -23,6 +26,15 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.miedo.detodoaqui.MainActivity" />
+        </activity>
+        <activity
+            android:name=".RegisterEstablishmentActivity"
+            android:label="@string/title_activity_register_establishment"
+            android:parentActivityName=".EstablishmentsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.miedo.detodoaqui.EstablishmentsActivity" />
         </activity>
         <activity
             android:name=".MainActivity"

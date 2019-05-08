@@ -1,1 +1,8 @@
+<<<<<<< HEAD
 #Sun May 05 18:40:31 COT 2019
+=======
+#Tue May 07 11:48:25 COT 2019
+base.0=C\:\\Users\\Billy\\Documents\\AndroidProjects\\ProyectoTaller\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\3
+path.0=classes.dex
+renamed.0=classes.dex
+>>>>>>> ba2c262796db46dc816a1bf0ec1363c8554f30f0
