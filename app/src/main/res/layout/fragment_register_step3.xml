@@ -18,7 +18,7 @@
         <View
             android:id="@+id/view"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="60dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginEnd="8dp"
@@ -60,15 +60,15 @@
             android:ellipsize="end"
             android:focusable="true"
             android:maxLines="2"
-            android:text="El secreto de la abuelita de Yadomi"
+            android:text="El rinconcito de la tía Venocancer GAAAAAAAA"
             android:textColor="@android:color/black"
             android:textSize="17sp"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_perfil"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/iv_perfil"
             app:layout_constraintTop_toBottomOf="@+id/iv_fondo"
-            app:layout_constraintVertical_bias="0.17000002" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/nextButton2"
@@ -133,7 +133,7 @@
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
@@ -156,8 +156,8 @@
         <ImageView
             android:id="@+id/iv_fondo"
             android:layout_width="0dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="8dp"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="@id/view"
             app:layout_constraintStart_toStartOf="@id/view"
@@ -168,13 +168,13 @@
             android:id="@+id/iv_perfil"
             android:layout_width="95dp"
             android:layout_height="91dp"
-            android:layout_marginTop="176dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
             app:layout_constraintEnd_toEndOf="@+id/iv_fondo"
-            app:layout_constraintHorizontal_bias="0.062"
+            app:layout_constraintHorizontal_bias="0.028"
             app:layout_constraintStart_toStartOf="@+id/iv_fondo"
-            app:layout_constraintTop_toTopOf="@+id/iv_fondo"
             tools:srcCompat="@tools:sample/avatars[3]" />
 
 

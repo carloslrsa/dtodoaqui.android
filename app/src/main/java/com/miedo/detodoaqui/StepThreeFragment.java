@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.squareup.picasso.Picasso;
 
@@ -32,6 +33,11 @@ public class StepThreeFragment extends Fragment {
                 .into(iv_fondo);
         Picasso.get().load("https://pbs.twimg.com/profile_images/793844362698428416/_VXIiSQT.jpg")
                 .into(iv_perfil);
+
+
+        view.findViewById(R.id.nextButton).setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.next_action, null)
+        );
 
 
         return view;

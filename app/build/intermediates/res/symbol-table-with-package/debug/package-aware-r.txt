@@ -1056,7 +1056,11 @@ drawable ic_comment
 drawable ic_email
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_link
+drawable ic_local_phone
 drawable ic_location
+drawable ic_lock_open
+drawable ic_lock_outline
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
@@ -1198,6 +1202,9 @@ id enterAlways
 id enterAlwaysCollapsed
 id establishmentsSearchRV
 id establishments_dest
+id et_mail
+id et_phone
+id et_web
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1236,7 +1243,6 @@ id keywordSearchET2
 id keywordSearchET3
 id keywordSearchET4
 id keywordSearchET5
-id keywordSearchET6
 id labeled
 id largeLabel
 id left
@@ -1253,7 +1259,6 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
-id multispinner
 id nav_controller_view_tag
 id nav_establishment
 id nav_graph
@@ -1326,6 +1331,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id spinner_services
 id split_action_bar
 id spread
 id spread_inside
@@ -1335,6 +1341,7 @@ id src_over
 id standard
 id start
 id status_bar_latest_event_content
+id stepFourFragment
 id stepOneFragment
 id stepThreeFragment
 id stepTwoFragment
@@ -1360,6 +1367,8 @@ id textView2
 id textView3
 id textView4
 id textView5
+id textView6
+id textView8
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1379,8 +1388,10 @@ id transition_scene_layoutid_cache
 id transition_transform
 id tv_ciudad
 id tv_distrito
+id tv_end_time
 id tv_number_reviews
 id tv_pais
+id tv_start_time
 id tv_title_establishment
 id uniform
 id unlabeled
@@ -1465,6 +1476,7 @@ layout fragment_profile
 layout fragment_register_step1
 layout fragment_register_step2
 layout fragment_register_step3
+layout fragment_register_step4
 layout fragment_search
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include

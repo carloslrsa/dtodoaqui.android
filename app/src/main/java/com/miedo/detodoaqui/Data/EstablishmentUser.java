@@ -46,7 +46,6 @@ public class EstablishmentUser {
         this.urlImage = urlImage;
     }
 
-
     @Override
     public String toString() {
         return "EstablishmentUser{" +
