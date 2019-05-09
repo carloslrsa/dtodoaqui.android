@@ -1140,6 +1140,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_profile_dest_to_loginuser_dest
 id action_profile_dest_to_registerUserActivity
 id action_profile_to_establishments
 id action_text
@@ -1157,6 +1158,7 @@ id beginning
 id blocking
 id bottom
 id bt_establishments
+id bt_login
 id bt_register
 id buttonPanel
 id cancel_action
@@ -1192,6 +1194,7 @@ id direct
 id disableHome
 id editText2
 id edit_query
+id emailUserRegisterET
 id end
 id end_padder
 id enterAlways
@@ -1232,10 +1235,6 @@ id iv_entablishment_picture
 id iv_fondo
 id iv_perfil
 id keywordSearchET
-id keywordSearchET2
-id keywordSearchET3
-id keywordSearchET4
-id keywordSearchET5
 id keywordSearchET6
 id labeled
 id largeLabel
@@ -1245,6 +1244,8 @@ id line3
 id listMode
 id list_item
 id locationSearchET
+id loginUserButton
+id loginuser_dest
 id masked
 id media_actions
 id message
@@ -1277,6 +1278,8 @@ id parallax
 id parent
 id parentPanel
 id parent_matrix
+id passConfUserRegisterET
+id passwordUserLoginET
 id percent
 id pin
 id profile_dest
@@ -1286,7 +1289,6 @@ id progress_horizontal
 id radio
 id rb_rating
 id recycler
-id registerUserButton
 id registeruser_dest
 id resEstRatingBar
 id right
@@ -1386,6 +1388,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id usernameUserLoginET
 id view
 id view_offset_helper
 id visible
@@ -1440,6 +1443,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_establishments
+layout activity_login_user
 layout activity_main
 layout activity_register_establishment
 layout activity_register_user
@@ -1465,6 +1469,7 @@ layout fragment_profile
 layout fragment_register_step1
 layout fragment_register_step2
 layout fragment_register_step3
+layout fragment_register_step4
 layout fragment_search
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include

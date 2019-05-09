@@ -56,6 +56,7 @@ public class SearchFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         viewModel = ViewModelProviders.of(this).get(EstablishmentsSearchViewModel.class);
+
     }
 
     @Override
@@ -114,7 +115,6 @@ public class SearchFragment extends Fragment {
         establishmentsSearchResult = (RecyclerView) view.findViewById(R.id.establishmentsSearchRV);
 
         establishmentsSearchResult.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
-
 
         return view;
     }

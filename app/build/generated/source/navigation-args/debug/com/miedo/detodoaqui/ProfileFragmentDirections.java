@@ -17,4 +17,9 @@ public class ProfileFragmentDirections {
   public static NavDirections actionProfileDestToRegisterUserActivity() {
     return new ActionOnlyNavDirections(R.id.action_profile_dest_to_registerUserActivity);
   }
+
+  @NonNull
+  public static NavDirections actionProfileDestToLoginuserDest() {
+    return new ActionOnlyNavDirections(R.id.action_profile_dest_to_loginuser_dest);
+  }
 }

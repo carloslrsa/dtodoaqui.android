@@ -77,6 +77,9 @@ public class ProfileFragment extends Fragment {
         Button bt_registro = view.findViewById(R.id.bt_register);
         bt_registro.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.registeruser_dest));
 
+        Button bt_login = view.findViewById(R.id.bt_login);
+        bt_login.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.loginuser_dest));
+
         return view;
     }
 
