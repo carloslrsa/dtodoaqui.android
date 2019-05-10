@@ -131,7 +131,7 @@
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center"
-            android:text="Siguiente"
+            android:text="@string/continue_label_text"
             android:textAllCaps="true"
             android:textColor="@android:color/white"
             android:textStyle="bold"

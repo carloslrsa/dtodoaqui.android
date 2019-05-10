@@ -14,5 +14,6 @@
     <string name="title_activity_register_user">RegisterUserActivity</string>
 
     <string name="title_activity_register_establishment">RegisterEstablismentActivity</string>
+    <string name="continue_label_text">Continuar</string>
 
 </resources>

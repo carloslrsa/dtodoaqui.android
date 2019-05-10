@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
-
+    card_view:cardBackgroundColor="@color/colorPrimary"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="4dp"
     android:layout_marginVertical="5dp"
-    android:background="#FFFFFF"
     android:elevation="3dp"
 
     android:padding="8dp"
@@ -16,7 +15,10 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+
+
+        >
 
         <ImageView
             android:id="@+id/iv_entablishment_picture"
@@ -37,8 +39,8 @@
             android:background="@drawable/gradient_background"
             android:padding="8dp"
             android:text="La tiendita de don Pepe"
-            android:textSize="15sp"
             android:textColor="#FFFFFF"
+            android:textSize="15sp"
             card_view:layout_constraintBottom_toBottomOf="@+id/iv_entablishment_picture"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent" />
@@ -52,6 +54,7 @@
             android:layout_marginLeft="8dp"
             android:padding="6dp"
             android:text="12"
+            android:textColor="@color/textColorOptional"
             android:textSize="14sp"
             card_view:layout_constraintStart_toEndOf="@+id/imageView"
             card_view:layout_constraintTop_toBottomOf="@+id/iv_entablishment_picture" />
@@ -64,6 +67,8 @@
             android:layout_marginLeft="8dp"
 
             android:layout_marginTop="8dp"
+
+            android:tint="@color/textColorOptional"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="@+id/tv_number_reviews"
             card_view:srcCompat="@drawable/ic_comment"
@@ -71,7 +76,8 @@
 
         <androidx.appcompat.widget.AppCompatRatingBar
             android:id="@+id/rb_rating"
-            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+            style="@style/RatingBar"
+            android:theme="@style/RatingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -80,6 +86,7 @@
             android:isIndicator="false"
             android:numStars="5"
             android:rating="3"
+
             android:stepSize="0.5"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/tv_title_establishment" />

@@ -2,34 +2,34 @@
 <instant-run
     abi="armeabi-v7a,armeabi"
     api-level="25"
-    build-mode="HOT_WARM"
+    build-mode="COLD"
     density="xhdpi"
     format="10"
     plugin-version="3.4.0"
-    timestamp="1557383882129"
+    timestamp="1557445367230"
     token="1157007732057418172"
-    verifier="COMPATIBLE" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="473" />
+        duration="0" />
     <task
         name="instant-run-dex"
-        duration="150" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="26" />
+        duration="0" />
     <task
         name="verifier"
-        duration="4" />
+        duration="0" />
 
     <artifact
-        location="C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1557383148363"
+        timestamp="1557445202475"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
@@ -70,28 +70,11 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="METHOD_DELETED"
-        timestamp="1557383700602"
+        timestamp="1557445367230"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1557383795198"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\build\intermediates\builds\debug\1557383795198\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1557383882129"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
+            location="C:\Users\Billy\Documents\AndroidProjects\ProyectoTaller\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

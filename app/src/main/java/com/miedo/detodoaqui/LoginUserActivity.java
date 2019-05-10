@@ -94,17 +94,15 @@ public class LoginUserActivity extends AppCompatActivity {
     private String fetchStringBody() {
         JSONObject request = new JSONObject();
 
-        JSONObject user = new JSONObject();
-
         String retorno = null;
 
         try {
 
-            user.put("email", et_username.getText().toString());
-            user.put("password", et_password.getText().toString());
-            user.put("password_confirmation", et_password.getText().toString());
+            request.put("email", et_username.getText().toString());
+            request.put("password", et_password.getText().toString());
+            //user.put("password_confirmation", et_password.getText().toString());
 
-            request.put("user", user);
+            //request.put("user", user);
 
             Log.i(TAG, request.toString(4));
 
