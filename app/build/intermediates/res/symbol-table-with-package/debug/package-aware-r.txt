@@ -1250,7 +1250,6 @@ id line3
 id listMode
 id list_item
 id locationSearchET
-id loginUserButton
 id loginuser_dest
 id masked
 id media_actions
@@ -1284,7 +1283,7 @@ id parent
 id parentPanel
 id parent_matrix
 id passConfUserRegisterET
-id passwordUserLoginET
+id passwordUserRegisterET
 id percent
 id pin
 id profile_dest
@@ -1294,6 +1293,7 @@ id progress_horizontal
 id radio
 id rb_rating
 id recycler
+id registerUserButton
 id registeruser_dest
 id resEstRatingBar
 id right
@@ -1399,7 +1399,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id usernameUserLoginET
+id usernameUserRegisterET
 id view
 id view_offset_helper
 id visible
@@ -1773,6 +1773,8 @@ style Base_Widget_MaterialComponents_TextInputLayout
 style CardView
 style CardView_Dark
 style CardView_Light
+style EditText
+style NormalButton
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents
@@ -1805,6 +1807,7 @@ style RtlOverlay_Widget_AppCompat_Search_DropDown_Text
 style RtlOverlay_Widget_AppCompat_SearchView_MagIcon
 style RtlUnderlay_Widget_AppCompat_ActionButton
 style RtlUnderlay_Widget_AppCompat_ActionButton_Overflow
+style Spinner
 style TextAppearance_AppCompat
 style TextAppearance_AppCompat_Body1
 style TextAppearance_AppCompat_Body2

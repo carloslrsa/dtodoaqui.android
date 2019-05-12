@@ -31,8 +31,8 @@ import java.util.List;
 
 public class SearchFragment extends Fragment {
 
-    private final int searchContainerColapsedHeight = 85;
-    private final int searchContainerExpandedHeight = 275;
+    private final int searchContainerColapsedHeight = 150;
+    private final int searchContainerExpandedHeight = 450;
 
     private LinearLayout searchLayout;
     private EditText keywordSearchParam;
@@ -56,7 +56,6 @@ public class SearchFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         viewModel = ViewModelProviders.of(this).get(EstablishmentsSearchViewModel.class);
-
     }
 
     @Override
@@ -87,7 +86,7 @@ public class SearchFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 hideKeyboard();
-                collapseSearchLayout(300);
+                collapseSearchLayout(150);
                 establishmentsSearchResult.setAdapter(null);
                 progressSearchBar.setVisibility(View.VISIBLE);
                 //Búsqueda
@@ -98,10 +97,10 @@ public class SearchFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(colapsed){
-                    expandSearchLayout(300);
+                    expandSearchLayout(150);
 
                 }else {
-                    collapseSearchLayout(300);
+                    collapseSearchLayout(150);
                 }
             }
         });
@@ -168,6 +167,7 @@ public class SearchFragment extends Fragment {
                 @Override
                 public void onAnimationStart(Animator animation) {
                     locationSearchParam.setVisibility(View.VISIBLE);
+                    categoriesSearchParam.setVisibility(View.VISIBLE);
                 }
             });
             valueAnimator.setInterpolator(new DecelerateInterpolator());
@@ -192,10 +192,16 @@ public class SearchFragment extends Fragment {
                 }
             });
             valueAnimator.addListener(new AnimatorListenerAdapter() {
+
+                @Override
+                public void onAnimationStart(Animator animation) {
+                    locationSearchParam.setVisibility(View.INVISIBLE);
+                    categoriesSearchParam.setVisibility(View.INVISIBLE);
+                }
+
                 @Override
                 public void onAnimationEnd(Animator animation) {
                     colapseButton.setCompoundDrawablesWithIntrinsicBounds( 0, 0, 0 ,R.drawable.ic_arrow_down);
-                    locationSearchParam.setVisibility(View.INVISIBLE);
                 }
             });
             valueAnimator.setInterpolator(new DecelerateInterpolator());

@@ -1,30 +1,18 @@
 package com.miedo.detodoaqui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.miedo.detodoaqui.Data.Remote.CesarFakeAPI;
-import com.miedo.detodoaqui.Data.Remote.ServiceGenerator;
-import com.miedo.detodoaqui.Utils.JWTUtils;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-
-import okhttp3.MediaType;
-import okhttp3.RequestBody;
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import com.miedo.detodoaqui.Data.Local.SessionManager;
+import com.miedo.detodoaqui.Data.User;
+import com.miedo.detodoaqui.Viewmodels.UserViewModel;
 
 public class LoginUserActivity extends AppCompatActivity {
 
@@ -34,102 +22,53 @@ public class LoginUserActivity extends AppCompatActivity {
     private EditText et_username;
     private EditText et_password;
 
+    private UserViewModel viewModel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_user);
 
-        et_username = findViewById(R.id.usernameUserLoginET);
-        et_password = findViewById(R.id.passwordUserLoginET);
+        et_username = findViewById(R.id.usernameUserRegisterET);
+        et_password = findViewById(R.id.passwordUserRegisterET);
 
-        Button bt_login = findViewById(R.id.loginUserButton);
+        Button bt_login = findViewById(R.id.registerUserButton);
 
         bt_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String username = et_username.getText().toString();
+                String password = et_password.getText().toString();
 
-                // Obtenemos el cuerpo del body para la peticion post en forma de string
-                String jsonRequest = fetchStringBody();
+                if(!username.isEmpty() && !password.isEmpty()){
+                    et_username.setEnabled(false);
+                    et_password.setEnabled(false);
+                    viewModel.Login(username,password);
+                }
+            }
+        });
 
-                // Creamos la instancia de la api
-                CesarFakeAPI api = ServiceGenerator.createServiceScalar(CesarFakeAPI.class);
+        //ViewModel
 
-                // Creamos el objeto RequestBody con el jsonRequest
-                RequestBody body = RequestBody.create(MediaType.parse("application/json"), jsonRequest);
+        viewModel = ViewModelProviders.of(this).get(UserViewModel.class);
 
-                // Realizamos la peticion asincrona
-                Call<ResponseBody> call = api.loginUsuario(body);
-                call.enqueue(new Callback<ResponseBody>() {
-                    @Override
-                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                        if (response.isSuccessful()) {
-
-                            String rspta = fetchResponse(response.body());
-                            Log.i(TAG, "Respuesta : "+rspta);
-
-                            Toast.makeText(LoginUserActivity.this, "Funciono el login GAAAAAAA", Toast.LENGTH_LONG).show();
-
-
-                        } else {
-
-                            Toast.makeText(LoginUserActivity.this, "Error response code:" + response.code(), Toast.LENGTH_LONG).show();
-
-                        }
-
-                    }
-
-                    @Override
-                    public void onFailure(Call<ResponseBody> call, Throwable t) {
-
-                        Toast.makeText(LoginUserActivity.this, "Error: " + t.getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                });
-
-
+        viewModel.getUserLogin().observe(this, new Observer<User>() {
+            @Override
+            public void onChanged(User user) {
+                if(user == null){
+                    //Login fallido
+                    et_username.setEnabled(true);
+                    et_password.setEnabled(true);
+                    Toast.makeText(LoginUserActivity.this, "Login fallido", Toast.LENGTH_SHORT).show();
+                }else{
+                    //Login exitoso
+                    Toast.makeText(LoginUserActivity.this, "Login exitoso", Toast.LENGTH_SHORT).show();
+                    SessionManager.getInstance().StartSession(user);
+                    finish();
+                }
             }
         });
 
     }
 
-    private String fetchStringBody() {
-        JSONObject request = new JSONObject();
-
-        String retorno = null;
-
-        try {
-
-            request.put("email", et_username.getText().toString());
-            request.put("password", et_password.getText().toString());
-            //user.put("password_confirmation", et_password.getText().toString());
-
-            //request.put("user", user);
-
-            Log.i(TAG, request.toString(4));
-
-            retorno = request.toString();
-        } catch (JSONException e) {
-            Log.e(TAG, e.getMessage());
-        }
-        return retorno;
-
-    }
-
-
-    private String fetchResponse(ResponseBody response) {
-
-        String retorno = null;
-        try {
-            String tokenResponse = new JSONObject(response.string()).getString("jwt");
-            retorno = JWTUtils.getJson(tokenResponse);
-
-        } catch (JSONException e) {
-            Log.e(TAG , e.getMessage());
-        } catch (UnsupportedEncodingException e) {
-            Log.e(TAG , e.getMessage());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return retorno;
-
-    }
 }

@@ -18,7 +18,7 @@
         app:cardBackgroundColor="@color/colorPrimaryDark"
         app:cardCornerRadius="40dp"
         app:cardElevation="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/loginUserButton"
+        app:layout_constraintBottom_toTopOf="@+id/registerUserButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -42,7 +42,7 @@
                 android:paddingLeft="5dp" />
 
             <EditText
-                android:id="@+id/usernameUserLoginET"
+                android:id="@+id/usernameUserRegisterET"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginStart="32dp"
@@ -54,7 +54,7 @@
                 android:paddingLeft="10dp" />
 
             <EditText
-                android:id="@+id/passwordUserLoginET"
+                android:id="@+id/passwordUserRegisterET"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginStart="32dp"
@@ -82,7 +82,7 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/loginUserButton"
+        android:id="@+id/registerUserButton"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginStart="48dp"

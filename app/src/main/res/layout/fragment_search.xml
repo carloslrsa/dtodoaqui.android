@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/backgroundColor"
     tools:context=".SearchFragment">
 
     <LinearLayout
         android:id="@+id/searchLayout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="450dp"
         android:background="@drawable/semiround_background"
         android:orientation="vertical"
         android:visibility="visible"
@@ -20,44 +20,28 @@
 
         <EditText
             android:id="@+id/keywordSearchET"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/edit_round"
+            style="@style/EditText"
+            android:layout_marginTop="50dp"
             android:drawableLeft="@drawable/ic_search"
             android:hint="Palabra clave" />
 
         <EditText
             android:id="@+id/locationSearchET"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/edit_round"
+            style="@style/EditText"
             android:drawableLeft="@drawable/ic_location"
             android:hint="Ubicación" />
 
         <Spinner
             android:id="@+id/categoriesSearchSpinner"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/edit_round"
+            style="@style/Spinner"
+            android:layout_marginBottom="40dp"
             android:entries="@array/categories_array"
-            android:spinnerMode="dialog"
-            android:textAlignment="center" />
+        />
 
         <Button
             android:id="@+id/searchButton"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginBottom="25dp"
-            android:background="@drawable/button_round"
+            style="@style/NormalButton"
+            android:layout_marginBottom="50dp"
             android:text="BUSCAR ESTABLECIMIENTO" />
     </LinearLayout>
 

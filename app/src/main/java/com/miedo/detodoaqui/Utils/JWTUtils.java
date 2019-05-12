@@ -1,5 +1,7 @@
 package com.miedo.detodoaqui.Utils;
 
+import android.util.Base64;
+
 import java.io.UnsupportedEncodingException;
 
 public class JWTUtils {
@@ -12,7 +14,7 @@ public class JWTUtils {
     }
     public static String getJson(String str) throws UnsupportedEncodingException{
         byte[] decodedBytes;
-        decodedBytes = android.util.Base64.decode(str,android.util.Base64.URL_SAFE);
+        decodedBytes = android.util.Base64.decode(str, Base64.DEFAULT);
         return new String(decodedBytes, "UTF-8");
     }
 }
