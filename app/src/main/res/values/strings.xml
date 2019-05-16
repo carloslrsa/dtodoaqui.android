@@ -15,5 +15,11 @@
 
     <string name="title_activity_register_establishment">RegisterEstablismentActivity</string>
     <string name="continue_label_text">Continuar</string>
+    <string name="back_label_text">Atrás</string>
+    <string name="complete_label_text">Finalizar</string>
+
+
+    <!-- strings del paso 1 del registro de establecimientos -->
+    <string name="select_categories_label">Selecciona una o más categorías</string>
 
 </resources>

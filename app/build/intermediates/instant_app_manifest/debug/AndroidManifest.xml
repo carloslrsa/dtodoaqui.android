@@ -13,6 +13,8 @@
     <dist:module dist:instant="true" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -24,6 +26,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.miedo.detodoaqui.RegistroFakeActivity" />
         <activity android:name="com.miedo.detodoaqui.LoginUserActivity" />
         <activity
             android:name="com.miedo.detodoaqui.RegisterUserActivity"

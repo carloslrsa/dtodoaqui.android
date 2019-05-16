@@ -33,6 +33,7 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
+
         <fragment
             android:id="@+id/fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"

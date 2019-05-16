@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatSpinner;
 
+import com.miedo.detodoaqui.R;
+
 import java.util.List;
 
 public class MultiSpinner extends AppCompatSpinner implements
@@ -42,7 +44,7 @@ public class MultiSpinner extends AppCompatSpinner implements
     @Override
     public void onCancel(DialogInterface dialog) {
         // refresh text on spinner
-        StringBuffer spinnerBuffer = new StringBuffer();
+        /*StringBuffer spinnerBuffer = new StringBuffer();
         boolean someSelected = false;
         for (int i = 0; i < items.size(); i++) {
             if (selected[i] == true) {
@@ -59,7 +61,8 @@ public class MultiSpinner extends AppCompatSpinner implements
 
         } else {
             spinnerText = defaultText;
-        }
+        }*/
+        String spinnerText = getResources().getString(R.string.select_categories_label);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(),
                 android.R.layout.simple_spinner_item,

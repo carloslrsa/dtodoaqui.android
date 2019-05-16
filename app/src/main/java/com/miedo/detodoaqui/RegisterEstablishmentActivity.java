@@ -1,9 +1,14 @@
 package com.miedo.detodoaqui;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
+
+import com.miedo.detodoaqui.Adapters.StepperAdapter;
+import com.stepstone.stepper.StepperLayout;
 
 public class RegisterEstablishmentActivity extends AppCompatActivity {
 
@@ -19,5 +24,10 @@ public class RegisterEstablishmentActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

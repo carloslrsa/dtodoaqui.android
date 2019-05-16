@@ -30,10 +30,12 @@
         <item name="android:layout_marginBottom">20dp</item>
         <item name="android:background">@drawable/edit_round</item>
     </style>
+
     <style name="Spinner" parent="EditText">
         <item name="android:spinnerMode">dialog</item>
         <item name="android:textAlignment">center</item>
     </style>
+
     <style name="NormalButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">60dp</item>
@@ -42,6 +44,40 @@
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_marginBottom">10dp</item>
         <item name="android:background">@drawable/button_round</item>
+    </style>
+
+
+    <!-- category label -->
+    <style name="CategoryLabel">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/category_round_border</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+    </style>
+
+    <!-- step number -->
+    <style name="StepNumber" parent="AppTheme">
+
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:backgroundTint">@color/colorButtonAccent</item>
+        <item name="android:background">@drawable/edit_round</item>
+        <item name="android:textSize">15sp</item>
+
+    </style>
+
+    <style name="RaisedButtonDark" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/colorPrimaryDark</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
 </resources>

@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
+    android:fillViewport="true"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    android:fillViewport="true"
     android:padding="6dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -35,13 +35,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:focusable="true"
-            android:text="Puedes insertar un logo del establecimiento como foto de perfil."
-            android:textColor="@color/textColorOptional"
+            android:text="Puedes insertar un logo del establecimiento como foto de perfil. Opcional *"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +56,7 @@
             android:ellipsize="end"
             android:focusable="true"
             android:maxLines="2"
-            android:text="El rinconcito de la tía Venocancer GAAAAAAAA"
+            android:text="La rica Vicky"
             android:textColor="@android:color/black"
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="@+id/view"
@@ -71,20 +67,18 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
-            android:id="@+id/nextButton2"
+            android:id="@+id/bt_pick_logo"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:background="@drawable/gradient_blue"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
+
+            android:backgroundTint="@color/colorPrimaryDark"
+
+            android:onClick="pickLogo"
             android:text="Cargar foto de perfil"
-            android:textColor="@color/colorAccent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -95,63 +89,28 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:focusable="true"
-            android:text="Puedes insertar una foto del establecimiento como imagen de fondo."
-            android:textColor="@color/textColorOptional"
+            android:text="Puedes insertar una foto del establecimiento como imagen de fondo. Opcional*"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/nextButton2" />
+            app:layout_constraintTop_toBottomOf="@id/bt_pick_logo" />
 
         <Button
-            android:id="@+id/nextButton3"
+            android:id="@+id/bt_pick_background"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:background="@drawable/gradient_blue"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
+            android:backgroundTint="@color/colorPrimaryDark"
             android:text="Cargar foto de fondo"
-            android:textColor="@color/colorAccent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textView4" />
-
-        <TextView
-            android:id="@+id/nextButton"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/gradient_gray"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:gravity="center"
-            android:text="@string/continue_label_text"
-            android:textAllCaps="true"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.666"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nextButton3"
-            app:layout_constraintVertical_bias="1.0" />
 
         <ImageView
             android:id="@+id/iv_fondo"
@@ -162,20 +121,22 @@
             app:layout_constraintEnd_toEndOf="@id/view"
             app:layout_constraintStart_toStartOf="@id/view"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/backgrounds/scenic[15]" />
+            app:srcCompat="@drawable/background_default"
+            tools:srcCompat="@drawable/background_default" />
 
         <ImageView
             android:id="@+id/iv_perfil"
             android:layout_width="95dp"
             android:layout_height="91dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="@+id/view"
             app:layout_constraintEnd_toEndOf="@+id/iv_fondo"
             app:layout_constraintHorizontal_bias="0.028"
             app:layout_constraintStart_toStartOf="@+id/iv_fondo"
-            tools:srcCompat="@tools:sample/avatars[3]" />
+            app:srcCompat="@drawable/logo_default"
+            tools:srcCompat="@drawable/logo_default" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

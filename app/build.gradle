@@ -48,6 +48,11 @@ dependencies {
     implementation 'com.android.support:cardview-v7:28.0.0'
     implementation 'com.android.support:recyclerview-v7:28.0.0'
 
+    // Steper para el registro de establecimientos
+    implementation 'com.stepstone.stepper:material-stepper:4.3.1'
+
+    // Layout para simular un FlowLayout
+    implementation 'com.google.android:flexbox:1.1.0'
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
     implementation 'com.squareup.okhttp3:okhttp:3.14.1'

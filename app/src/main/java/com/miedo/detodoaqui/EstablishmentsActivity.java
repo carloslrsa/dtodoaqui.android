@@ -42,7 +42,7 @@ public class EstablishmentsActivity extends AppCompatActivity {
                         .setAction("Action", null).show();*/
 
                 // cambiar por start activity for result
-                Intent intent = new Intent(EstablishmentsActivity.this, RegisterEstablishmentActivity.class);
+                Intent intent = new Intent(EstablishmentsActivity.this, RegistroFakeActivity.class);
                 EstablishmentsActivity.this.startActivity(intent);
 
             }

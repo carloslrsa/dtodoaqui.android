@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,24 +16,33 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+import com.stepstone.stepper.Step;
+import com.stepstone.stepper.VerificationError;
 
 
-public class StepTwoFragment extends Fragment {
+public class StepTwoFragment extends Fragment implements Step {
 
     private static final String TAG = StepTwoFragment.class.getSimpleName();
 
-    // TODO : implementar ViewModel para extracción y filtro de las opciones
+    // variables para la identificación de erores
+    private static final String DIRECCION_ERROR = "1";
+    private static final String PAIS_ERROR = "2";
+    private static final String CIUDAD_ERROR = "3";
+    private static final String DISTRITO_ERROR = "4";
+
+    // variables hardcode de las opciones
     final String[] countryValues = {"Perú", "Ecuador", "Colombia", "Venezuela", "Argentina", "Chile", "Uruguay", "Bolivia"};
     final String[] cityValues = {"Lima", "Ica", "Arequipa", "Trujillo", "Moquegua"};
     final String[] districtValues = {"La Molina", "Breaña", "Lince", "Comas", "Callao", "Jesús María", "Pueblo Libre", "Carabayllo"};
 
+    String[] seleccionados = new String[3];
 
     private TextView tv_ciudad;
     private TextView tv_pais;
     private TextView tv_distrito;
 
-    private TextView hint_ciudad, hint_pais, hint_distrito;
-
+    private TextInputEditText et_direccion;
 
     // Cosntructor necesario
     public StepTwoFragment() {
@@ -55,23 +65,13 @@ public class StepTwoFragment extends Fragment {
         tv_ciudad = view.findViewById(R.id.tv_ciudad);
         tv_distrito = view.findViewById(R.id.tv_distrito);
         tv_pais = view.findViewById(R.id.tv_pais);
+        et_direccion = view.findViewById(R.id.et_direccion);
 
-        // Seteamos los hint
-        hint_pais = view.findViewById(R.id.hint_country);
-        hint_ciudad = view.findViewById(R.id.hint_city);
-        hint_distrito = view.findViewById(R.id.hint_district);
 
-        // TODO: cambiar logica por defecto de navegacion
-        view.findViewById(R.id.nextButton).setOnClickListener(
-                Navigation.createNavigateOnClickListener(R.id.next_action, null)
-        );
-
+        // listeners para desplegar los dialogs de seleccion
         tv_pais.setOnClickListener(getListenerCountries());
-
         tv_ciudad.setOnClickListener(getListenerCities());
-
         tv_distrito.setOnClickListener(getListenerDistricts());
-
 
         return view;
 
@@ -156,33 +156,76 @@ public class StepTwoFragment extends Fragment {
 
     void refreshCountry(int index) {
         if (index > -1 && index < countryValues.length) {
-            if (hint_pais.getVisibility() == View.INVISIBLE) {
-                hint_pais.setVisibility(View.VISIBLE);
-                tv_pais.setPadding(0, 20, 0, 0);
-            }
+            seleccionados[0] = countryValues[index];
             tv_pais.setText(countryValues[index]);
         }
     }
 
     void refreshCity(int index) {
         if (index > -1 && index < cityValues.length) {
-            if (hint_ciudad.getVisibility() == View.INVISIBLE) {
-                hint_ciudad.setVisibility(View.VISIBLE);
-                tv_ciudad.setPadding(0, 20, 0, 0);
-            }
+            seleccionados[1] = cityValues[index];
             tv_ciudad.setText(cityValues[index]);
         }
     }
 
     void refrestDistrict(int index) {
         if (index > -1 && index < districtValues.length) {
-            if (hint_distrito.getVisibility() == View.INVISIBLE) {
-                hint_distrito.setVisibility(View.VISIBLE);
-                tv_distrito.setPadding(0, 20, 0, 0);
-            }
+            seleccionados[2] = districtValues[index];
             tv_distrito.setText(districtValues[index]);
         }
     }
 
 
+    @Nullable
+    @Override
+    public VerificationError verifyStep() {
+        VerificationError ve = null;
+
+        et_direccion.setError(null);
+        tv_pais.setError(null);
+        tv_ciudad.setError(null);
+        tv_distrito.setError(null);
+
+        if (et_direccion.getText().toString().isEmpty()) {
+            ve = new VerificationError(DIRECCION_ERROR);
+        } else if (seleccionados[0] == null) {
+            ve = new VerificationError(PAIS_ERROR);
+        } else if (seleccionados[1] == null) {
+            ve = new VerificationError(CIUDAD_ERROR);
+        } else if (seleccionados[2] == null) {
+            ve = new VerificationError(DISTRITO_ERROR);
+        }
+        return ve;
+    }
+
+    @Override
+    public void onSelected() {
+
+        if (seleccionados[0] == null) {
+            return;
+        }
+
+        tv_pais.setText(seleccionados[0]);
+        tv_ciudad.setText(seleccionados[1]);
+        tv_distrito.setText(seleccionados[2]);
+
+    }
+
+    @Override
+    public void onError(@NonNull VerificationError error) {
+
+        if (error.getErrorMessage().equals(DIRECCION_ERROR)) {
+            et_direccion.setError("Debes ingresar la dirección");
+        } else if (error.getErrorMessage().equals(PAIS_ERROR)) {
+            tv_pais.setError("Debes escoger el país");
+            Toast.makeText(getContext(), "Debes escoger el país", Toast.LENGTH_SHORT).show();
+        } else if (error.getErrorMessage().equals(CIUDAD_ERROR)) {
+            tv_ciudad.setError("Debes escoger la ciudad");
+            Toast.makeText(getContext(), "Debes escoger la ciudad", Toast.LENGTH_SHORT).show();
+        } else if (error.getErrorMessage().equals(DISTRITO_ERROR)) {
+            tv_distrito.setError("Debes seleccionar un distrito");
+            Toast.makeText(getContext(), "Debes escoger el distrito", Toast.LENGTH_SHORT).show();
+        }
+
+    }
 }

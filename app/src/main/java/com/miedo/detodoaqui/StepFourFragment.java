@@ -13,11 +13,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.miedo.detodoaqui.Utils.MultiSpinner;
+import com.stepstone.stepper.Step;
+import com.stepstone.stepper.VerificationError;
 
 import java.util.Arrays;
 import java.util.Calendar;
 
-public class StepFourFragment extends Fragment implements MultiSpinner.MultiSpinnerListener {
+public class StepFourFragment extends Fragment implements MultiSpinner.MultiSpinnerListener , Step {
 
 
     private int hora_inicio, minuto_inicio, hora_fin, minuto_fin;
@@ -133,4 +135,19 @@ public class StepFourFragment extends Fragment implements MultiSpinner.MultiSpin
         recogerHora.show();
     }
 
+    @Nullable
+    @Override
+    public VerificationError verifyStep() {
+        return null;
+    }
+
+    @Override
+    public void onSelected() {
+
+    }
+
+    @Override
+    public void onError(@NonNull VerificationError error) {
+
+    }
 }
