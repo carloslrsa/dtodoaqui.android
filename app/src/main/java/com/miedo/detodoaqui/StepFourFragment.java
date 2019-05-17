@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.flexbox.FlexboxLayout;
+import com.miedo.detodoaqui.Adapters.StepperAdapter;
 import com.miedo.detodoaqui.Utils.MultiSpinner;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
@@ -23,7 +24,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
-public class StepFourFragment extends Fragment implements MultiSpinner.MultiSpinnerListener, Step {
+public class StepFourFragment extends Fragment implements MultiSpinner.MultiSpinnerListener, Step, StepperAdapter.StepDataListener {
 
 
     private int hora_inicio = -1, minuto_inicio = -1, hora_fin = -1, minuto_fin = -1;
@@ -195,5 +196,13 @@ public class StepFourFragment extends Fragment implements MultiSpinner.MultiSpin
     public void onError(@NonNull VerificationError error) {
         Toast.makeText(getContext(), error.getErrorMessage(), Toast.LENGTH_LONG).show();
 
+    }
+
+    @Override
+    public Bundle getData() {
+        Bundle bundle = new Bundle();
+
+
+        return null;
     }
 }

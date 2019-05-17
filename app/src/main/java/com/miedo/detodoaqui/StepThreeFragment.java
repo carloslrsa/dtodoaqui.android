@@ -16,13 +16,14 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
+import com.miedo.detodoaqui.Adapters.StepperAdapter;
 import com.miedo.detodoaqui.Utils.BitmapUtils;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
 import java.io.IOException;
 
-public class StepThreeFragment extends Fragment implements Step {
+public class StepThreeFragment extends Fragment implements Step, StepperAdapter.StepDataListener {
 
     public static final String TAG = StepThreeFragment.class.getSimpleName();
 
@@ -165,4 +166,8 @@ public class StepThreeFragment extends Fragment implements Step {
     }
 
 
+    @Override
+    public Bundle getData() {
+        return null;
+    }
 }

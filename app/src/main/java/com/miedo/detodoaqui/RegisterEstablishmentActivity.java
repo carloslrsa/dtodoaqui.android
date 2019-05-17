@@ -20,8 +20,7 @@ public class RegisterEstablishmentActivity extends AppCompatActivity implements 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_establishment);
-
-
+        
         mStepperLayout = (StepperLayout) findViewById(R.id.stepper);
         mStepperLayout.setAdapter(new StepperAdapter(getSupportFragmentManager(), this));
         mStepperLayout.setListener(this);
@@ -30,8 +29,10 @@ public class RegisterEstablishmentActivity extends AppCompatActivity implements 
 
     @Override
     public void onCompleted(View completeButton) {
-
         Toast.makeText(this, "onCompleted!", Toast.LENGTH_SHORT).show();
+
+
+        // Hacer la peticion a la api
     }
 
     @Override

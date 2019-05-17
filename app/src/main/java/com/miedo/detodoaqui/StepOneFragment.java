@@ -17,6 +17,7 @@ import androidx.navigation.Navigation;
 
 import com.google.android.flexbox.FlexboxLayout;
 import com.google.android.material.textfield.TextInputEditText;
+import com.miedo.detodoaqui.Adapters.StepperAdapter;
 import com.miedo.detodoaqui.Utils.MultiSpinner;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
@@ -25,7 +26,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class StepOneFragment extends Fragment implements MultiSpinner.MultiSpinnerListener, Step {
+public class StepOneFragment extends Fragment implements MultiSpinner.MultiSpinnerListener, Step, StepperAdapter.StepDataListener {
 
     private static final String TAG = StepOneFragment.class.getSimpleName();
 
@@ -139,4 +140,15 @@ public class StepOneFragment extends Fragment implements MultiSpinner.MultiSpinn
     }
 
 
+    @Override
+    public Bundle getData() {
+
+        Bundle bundle = new Bundle();
+
+        bundle.putString("nombre", et_nombre.getText().toString().trim());
+        bundle.putBooleanArray("categorias", seleccionados);
+
+        return bundle;
+
+    }
 }

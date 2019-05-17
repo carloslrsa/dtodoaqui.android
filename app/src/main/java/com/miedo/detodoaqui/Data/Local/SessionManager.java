@@ -1,49 +1,77 @@
 package com.miedo.detodoaqui.Data.Local;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
 import com.miedo.detodoaqui.Data.User;
 
 public class SessionManager {
 
+    private static final String PREFERENCE_NAME = "DTodoAquiClient";
+
     // String keys
-    public static final String USERNAME = "username";
-    public static final String PASSWORD = "password";
+    public static final String USER_NAME = "user_name";
+    public static final String IS_LOGGED = "user_login";
+    public static final String USER_PASSWORD = "user_pass";
 
-    public static final String ISLOGGED = "islogged";
-    public static final String JWT = "jwt";
+    // Variables para acceder a las preferencias
+    private SharedPreferences preferences;
+    private SharedPreferences.Editor editor;
+    private Context context;
 
-    //Singleton
-    private static SessionManager _instance = null;
-
-    public static SessionManager getInstance() {
-        if (_instance == null) {
-            _instance = new SessionManager();
-        }
-        return _instance;
+    public SessionManager(Context context) {
+        this.context = context;
+        this.preferences = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
+        this.editor = preferences.edit();
     }
 
-    private SessionManager() {
-    }
-    //SingletonEnd
 
-    private User activeUser;
-
-    private void LookForStoredSession() {
-
-    }
-
+    /**
+     * Inicia sesion marcando el login a true
+     * y seteando los datos de usuario en las preferencias
+     *
+     * @param user datos del login de usuario
+     */
     public void StartSession(User user) {
-        activeUser = user;
-        //Start session
+        editor.putBoolean(IS_LOGGED, true);
+        editor.putString(USER_NAME, user.getUsername());
+        editor.putString(USER_PASSWORD, user.getPassword());
+        editor.commit();
     }
 
+    /**
+     * Elimina los datos ingresados del usuario, si los hubiera
+     * y marca el login como false
+     */
     public void CloseSession() {
-        if (activeUser != null) {
-            //Close session
-        }
+        editor.putBoolean(IS_LOGGED, false);
+        editor.remove(USER_NAME);
+        editor.remove(USER_PASSWORD);
+        editor.commit();
+
     }
 
-    public User getActiveUser() {
-        return activeUser;
+
+    /**
+     * Funcion que devuelve los datos del usuario en forma de un objeto @{@link User}
+     * @return Objeto @{@link User} con los datos de la sesion.
+     */
+    public User getCurrentSession() {
+        User retorno = new User();
+        retorno.setUsername(preferences.getString(USER_NAME, "gaaaaa"));
+        retorno.setPassword(preferences.getString(USER_PASSWORD, "elmacaco"));
+
+        return retorno;
     }
+
+    /**
+     * Verifica si hay un usuario loggeado
+     *
+     * @return true si la preferencia IS_LOGGED es true, false de lo contrario
+     */
+    public boolean isUserLogged() {
+        return preferences.getBoolean(IS_LOGGED, false);
+    }
+
 
 }

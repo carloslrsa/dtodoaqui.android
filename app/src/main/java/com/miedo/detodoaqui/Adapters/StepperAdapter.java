@@ -18,6 +18,11 @@ import com.stepstone.stepper.viewmodel.StepViewModel;
 
 public class StepperAdapter extends AbstractFragmentStepAdapter {
 
+    public static interface StepDataListener {
+        public Bundle getData();
+    }
+
+
     final Step[] steps = {
 
             new StepOneFragment(),
