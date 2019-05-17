@@ -76,12 +76,12 @@
         "source": "C:\\Users\\Billy\\.gradle\\caches\\transforms-2\\files-2.1\\3ff8a692baa4a74a663249c44063053a\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_btn_unelevated_state_list_anim.xml.flat",
-        "source": "C:\\Users\\Billy\\.gradle\\caches\\transforms-2\\files-2.1\\f333a6c82e86013d939019d3936b06e6\\res\\animator\\mtrl_btn_unelevated_state_list_anim.xml"
-    },
-    {
         "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_logo_default.png.flat",
         "source": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\src\\main\\res\\drawable-v24\\logo_default.png"
+    },
+    {
+        "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_btn_unelevated_state_list_anim.xml.flat",
+        "source": "C:\\Users\\Billy\\.gradle\\caches\\transforms-2\\files-2.1\\f333a6c82e86013d939019d3936b06e6\\res\\animator\\mtrl_btn_unelevated_state_list_anim.xml"
     },
     {
         "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\drawable_category_round_border.xml.flat",
@@ -334,10 +334,6 @@
     {
         "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_user.png.flat",
         "source": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_user.png"
-    },
-    {
-        "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_establishment_register.xml.flat",
-        "source": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\src\\main\\res\\navigation\\nav_establishment_register.xml"
     },
     {
         "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
@@ -784,6 +780,10 @@
         "source": "C:\\Users\\Billy\\.gradle\\caches\\transforms-2\\files-2.1\\3ff8a692baa4a74a663249c44063053a\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
+        "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\layout_state_layout.xml.flat",
+        "source": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\src\\main\\res\\layout\\state_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_seekbar_track_material.xml.flat",
         "source": "C:\\Users\\Billy\\.gradle\\caches\\transforms-2\\files-2.1\\3ff8a692baa4a74a663249c44063053a\\res\\drawable\\abc_seekbar_track_material.xml"
     },
@@ -1042,6 +1042,10 @@
     {
         "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_text_btn_text_color_selector.xml.flat",
         "source": "C:\\Users\\Billy\\.gradle\\caches\\transforms-2\\files-2.1\\f333a6c82e86013d939019d3936b06e6\\res\\color\\mtrl_text_btn_text_color_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade.xml.flat",
+        "source": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\src\\main\\res\\anim\\fade.xml"
     },
     {
         "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_star_black_24dp.png.flat",
@@ -1528,6 +1532,10 @@
         "source": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_star_black_24dp.png"
     },
     {
+        "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_text_input_layout.xml.flat",
+        "source": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\src\\main\\res\\drawable\\border_text_input_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Billy\\.gradle\\caches\\transforms-2\\files-2.1\\3ff8a692baa4a74a663249c44063053a\\res\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
@@ -1732,10 +1740,6 @@
         "source": "C:\\Users\\Billy\\.gradle\\caches\\transforms-2\\files-2.1\\3ff8a692baa4a74a663249c44063053a\\res\\color\\abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registro_fake.xml.flat",
-        "source": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\src\\main\\res\\layout\\activity_registro_fake.xml"
-    },
-    {
         "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_dialog_singlechoice_material.xml.flat",
         "source": "C:\\Users\\Billy\\.gradle\\caches\\transforms-2\\files-2.1\\3ff8a692baa4a74a663249c44063053a\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
@@ -1874,6 +1878,10 @@
     {
         "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_title_item.xml.flat",
         "source": "C:\\Users\\Billy\\.gradle\\caches\\transforms-2\\files-2.1\\3ff8a692baa4a74a663249c44063053a\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_not_found.png.flat",
+        "source": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\src\\main\\res\\drawable-v24\\ic_not_found.png"
     },
     {
         "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -2104,12 +2112,12 @@
         "source": "C:\\Users\\Billy\\.gradle\\caches\\transforms-2\\files-2.1\\3ff8a692baa4a74a663249c44063053a\\res\\drawable-xxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_hide_motion_spec.xml.flat",
-        "source": "C:\\Users\\Billy\\.gradle\\caches\\transforms-2\\files-2.1\\f333a6c82e86013d939019d3936b06e6\\res\\animator\\mtrl_fab_hide_motion_spec.xml"
-    },
-    {
         "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\layout_label_category.xml.flat",
         "source": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\src\\main\\res\\layout\\label_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_hide_motion_spec.xml.flat",
+        "source": "C:\\Users\\Billy\\.gradle\\caches\\transforms-2\\files-2.1\\f333a6c82e86013d939019d3936b06e6\\res\\animator\\mtrl_fab_hide_motion_spec.xml"
     },
     {
         "merged": "C:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_chronometer.xml.flat",

@@ -1,31 +1,56 @@
 package com.miedo.detodoaqui.Viewmodels;
 
+import android.os.AsyncTask;
+
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.miedo.detodoaqui.Data.EstablishmentSearch;
 import com.miedo.detodoaqui.Data.EstablishmentUser;
+import com.miedo.detodoaqui.Models.EstablishmentUserModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class EstablishmentsUserViewModel extends ViewModel {
 
-    private ArrayList<EstablishmentUser> data;
+    private MutableLiveData<List<EstablishmentUser>> data = new MutableLiveData<List<EstablishmentUser>>();
+    EstablishmentUserModel model = new EstablishmentUserModel();
 
     public EstablishmentsUserViewModel() {
-        init();
     }
 
-    private void init() {
-        data = new ArrayList<>();
-        data.add(new EstablishmentUser("La tiendita de don pepe", 4f, 124, "https://i.ytimg.com/vi/IfWQBBgs4y4/maxresdefault.jpg"));
-        data.add(new EstablishmentUser("La tia venocancer", 3f, 5555, "https://i.ytimg.com/vi/XEQtZNuBpJA/maxresdefault.jpg"));
-        data.add(new EstablishmentUser("El ezkai", 1f, 69, "https://redaccion.lamula.pe/media/uploads/b44fa272-bae5-4401-9d90-41af62185727.jpg"));
-        data.add(new EstablishmentUser("La ratacueva", 2f, 322, "https://i.ytimg.com/vi/tdEctrE76C8/maxresdefault.jpg"));
-        data.add(new EstablishmentUser("laboratorio gaaaaa", 4.7f, 322322, "https://multimedia.larepublica.pe/720x405/larepublica/imagen/2018/08/04/noticia-facebook-cabina-comercial.png"));
-    }
-
-
-    public List<EstablishmentUser> getData() {
+    public LiveData<List<EstablishmentUser>> getUserEstablishments() {
         return data;
     }
+
+    public void updateData() {
+        // data.setValue(model.searchData());
+        new SearchTask().execute(null, null, null);
+    }
+
+
+    //Test para simular la carga de datos
+    private class SearchTask extends AsyncTask<Void, Void, List<EstablishmentUser>> {
+
+        @Override
+        protected List<EstablishmentUser> doInBackground(Void... voids) {
+            List<EstablishmentUser> result = null;
+            try {
+                Thread.sleep(2000);
+                result = model.searchData();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return result;
+
+        }
+
+        @Override
+        protected void onPostExecute(List<EstablishmentUser> establishmentUsers) {
+            data.setValue(establishmentUsers);
+        }
+    }
+
 }

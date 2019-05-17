@@ -2,6 +2,7 @@ package com.miedo.detodoaqui.Data;
 
 public class EstablishmentUser {
 
+    private int id;
     private String title;
     private float rating;
     private Integer reviews;
@@ -12,6 +13,14 @@ public class EstablishmentUser {
         this.rating = rating;
         this.reviews = reviews;
         this.urlImage = urlImage;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getTitle() {
@@ -49,7 +58,8 @@ public class EstablishmentUser {
     @Override
     public String toString() {
         return "EstablishmentUser{" +
-                "title='" + title + '\'' +
+                "id=" + id +
+                ", title='" + title + '\'' +
                 ", rating=" + rating +
                 ", reviews=" + reviews +
                 ", urlImage='" + urlImage + '\'' +

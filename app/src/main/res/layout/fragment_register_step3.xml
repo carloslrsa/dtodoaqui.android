@@ -15,6 +15,30 @@
         android:layout_height="match_parent">
 
 
+        <TextView
+            android:id="@+id/textView12"
+            style="@style/StepNumber"
+            android:layout_width="@dimen/step_number_dim"
+            android:layout_height="@dimen/step_number_dim"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+
+            android:text="5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_pick_logo" />
+
+        <TextView
+            android:id="@+id/textView11"
+            style="@style/StepNumber"
+            android:layout_width="@dimen/step_number_dim"
+            android:layout_height="@dimen/step_number_dim"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+
+            android:text="4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
         <View
             android:id="@+id/view"
             android:layout_width="match_parent"
@@ -40,7 +64,7 @@
             android:text="Puedes insertar un logo del establecimiento como foto de perfil. Opcional *"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView11"
             app:layout_constraintTop_toBottomOf="@+id/view" />
 
         <TextView
@@ -70,7 +94,7 @@
             android:id="@+id/bt_pick_logo"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -91,17 +115,17 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:text="Puedes insertar una foto del establecimiento como imagen de fondo. Opcional*"
+            android:text="Puedes insertar una foto del establecimiento como imagen de fondo."
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView12"
             app:layout_constraintTop_toBottomOf="@id/bt_pick_logo" />
 
         <Button
             android:id="@+id/bt_pick_background"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"

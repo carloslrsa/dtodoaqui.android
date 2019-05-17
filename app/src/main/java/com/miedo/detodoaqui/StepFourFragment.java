@@ -2,35 +2,38 @@ package com.miedo.detodoaqui;
 
 import android.app.TimePickerDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.flexbox.FlexboxLayout;
 import com.miedo.detodoaqui.Utils.MultiSpinner;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.List;
 
-public class StepFourFragment extends Fragment implements MultiSpinner.MultiSpinnerListener , Step {
-
-
-    private int hora_inicio, minuto_inicio, hora_fin, minuto_fin;
+public class StepFourFragment extends Fragment implements MultiSpinner.MultiSpinnerListener, Step {
 
 
-    //Calendario para obtener fecha & hora
-    public final Calendar c = Calendar.getInstance();
+    private int hora_inicio = -1, minuto_inicio = -1, hora_fin = -1, minuto_fin = -1;
 
-    //Variables para obtener la hora actual
-    final int hora = c.get(Calendar.HOUR_OF_DAY);
-    final int minuto = c.get(Calendar.MINUTE);
+    private static final String ERROR_HORA = "1";
+
+    List<String> opciones = Arrays.asList("Wi-fi", "Delivery", "Pago con tarjeta", "Parking", "Patio de juegos", "Servicios Higiénicos");
+
+    boolean[] seleccionados = new boolean[opciones.size()];
+
 
     // Variables auxiliares para el formateo de la hora
     private static final String CERO = "0";
@@ -43,6 +46,9 @@ public class StepFourFragment extends Fragment implements MultiSpinner.MultiSpin
     // TextViews para obtener la hora de inicio y la hora de cierre.
     private TextView textViewStartTime;
     private TextView textViewEndTime;
+
+    // View para actualizar la seleccion
+    private FlexboxLayout flexboxLayout;
 
 
     @Override
@@ -58,6 +64,7 @@ public class StepFourFragment extends Fragment implements MultiSpinner.MultiSpin
         // Set views
         textViewStartTime = view.findViewById(R.id.tv_start_time);
         textViewEndTime = view.findViewById(R.id.tv_end_time);
+        flexboxLayout = view.findViewById(R.id.flex_box);
 
 
         textViewStartTime.setOnClickListener(new View.OnClickListener() {
@@ -77,7 +84,7 @@ public class StepFourFragment extends Fragment implements MultiSpinner.MultiSpin
         // Obtenemos el multispinner
         MultiSpinner multiSpinner = (MultiSpinner) view.findViewById(R.id.spinner_services);
         multiSpinner.setItems(
-                Arrays.asList("Wi-fi", "Delivery", "Pago con tarjeta", "Parking", "Patio de juegos", "Servicios Higiénicos"),
+                opciones,
                 "Selecciona uno o más servicios",
                 "Categorías", this);
 
@@ -87,7 +94,9 @@ public class StepFourFragment extends Fragment implements MultiSpinner.MultiSpin
 
     @Override
     public void onItemsSelected(boolean[] selected) {
-        // TODO implementar el listener para la seleccion de servicios
+
+        seleccionados = selected;
+        updateItemsSelected();
     }
 
     private void obtenerHora(final int opt) {
@@ -96,20 +105,7 @@ public class StepFourFragment extends Fragment implements MultiSpinner.MultiSpin
         TimePickerDialog recogerHora = new TimePickerDialog(this.getContext(), new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                //Formateo el hora obtenido: antepone el 0 si son menores de 10
-                String horaFormateada = (hourOfDay < 10) ? String.valueOf(CERO + hourOfDay) : String.valueOf(hourOfDay);
-                //Formateo el minuto obtenido: antepone el 0 si son menores de 10
-                String minutoFormateado = (minute < 10) ? String.valueOf(CERO + minute) : String.valueOf(minute);
-                //Obtengo el valor a.m. o p.m., dependiendo de la selección del usuario
-                String AM_PM;
-                if (hourOfDay < 12) {
-                    AM_PM = "a.m.";
-                } else {
-                    AM_PM = "p.m.";
-                }
-                //Muestro la hora con el formato deseado
-                String resultado = horaFormateada + DOS_PUNTOS + minutoFormateado + " " + AM_PM;
-
+                String resultado = formatTime(hourOfDay, minute);
                 // Si se selecciona la hora de inicio se asignan las variables de inicio, sino las de fin
                 if (opt == HORA_INICIO) {
                     textViewStartTime.setText(resultado);
@@ -135,19 +131,69 @@ public class StepFourFragment extends Fragment implements MultiSpinner.MultiSpin
         recogerHora.show();
     }
 
+    // actualizar la interfaz de la seleccion de categorías
+    public void updateItemsSelected() {
+        flexboxLayout.removeAllViews();
+        for (int i = 0; i < seleccionados.length; i++) {
+            if (seleccionados[i]) {
+
+                TextView textView = (TextView) getLayoutInflater().inflate(R.layout.label_category, null);
+                textView.setText(opciones.get(i));
+
+                flexboxLayout.addView(textView);
+
+            }
+        }
+    }
+
+    public String formatTime(int hourOfDay, int minute) {
+        //Formateo el hora obtenido: antepone el 0 si son menores de 10
+        String horaFormateada = (hourOfDay < 10) ? String.valueOf(CERO + hourOfDay) : String.valueOf(hourOfDay);
+        //Formateo el minuto obtenido: antepone el 0 si son menores de 10
+        String minutoFormateado = (minute < 10) ? String.valueOf(CERO + minute) : String.valueOf(minute);
+        //Obtengo el valor a.m. o p.m., dependiendo de la selección del usuario
+        String AM_PM;
+        if (hourOfDay < 12) {
+            AM_PM = "a.m.";
+        } else {
+            AM_PM = "p.m.";
+        }
+        //Muestro la hora con el formato deseado
+        return horaFormateada + DOS_PUNTOS + minutoFormateado + " " + AM_PM;
+    }
+
     @Nullable
     @Override
     public VerificationError verifyStep() {
-        return null;
+
+        VerificationError ve = null;
+        if (hora_inicio != -1 && hora_fin != -1) {
+            if (hora_fin < hora_inicio) {
+                ve = new VerificationError("La hora de cierre debe ser mayor que la hora de inicio.");
+            } else if (hora_inicio == hora_fin) {
+                if (minuto_fin < minuto_inicio) {
+                    ve = new VerificationError("La hora de cierre debe ser mayor que la hora de inicio");
+                }
+            }
+        }
+
+        return ve;
     }
 
     @Override
     public void onSelected() {
 
+        updateItemsSelected();
+
+        if (hora_inicio != -1 && hora_fin != -1) {
+            textViewStartTime.setText(formatTime(hora_inicio, minuto_inicio));
+            textViewEndTime.setText(formatTime(hora_fin, minuto_fin));
+        }
     }
 
     @Override
     public void onError(@NonNull VerificationError error) {
+        Toast.makeText(getContext(), error.getErrorMessage(), Toast.LENGTH_LONG).show();
 
     }
 }

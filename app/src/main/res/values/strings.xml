@@ -19,7 +19,10 @@
     <string name="complete_label_text">Finalizar</string>
 
 
-    <!-- strings del paso 1 del registro de establecimientos -->
+    <!-- strings del paso 1 del registro de establecimientos A COMPELTAR XD -->
     <string name="select_categories_label">Selecciona una o más categorías</string>
+    <string name="est_user_notfound_title">No hay establecimientos.</string>
+    <string name="est_user_notfound_descrip">No se encontraron establecimientos en tu cuenta, crea uno ahora mismo es fácil y rápido.</string>
+
 
 </resources>

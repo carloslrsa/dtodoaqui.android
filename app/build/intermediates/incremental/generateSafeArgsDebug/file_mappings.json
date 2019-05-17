@@ -1,1 +1,1 @@
-[{"navFile":"src\\main\\res\\navigation\\nav_establishment_register.xml","javaFiles":["com.miedo.detodoaqui.StepOneFragmentDirections","com.miedo.detodoaqui.StepTwoFragmentDirections","com.miedo.detodoaqui.StepThreeFragmentDirections"]},{"navFile":"src\\main\\res\\navigation\\nav_graph.xml","javaFiles":["com.miedo.detodoaqui.ProfileFragmentDirections"]}]
+[{"navFile":"src\\main\\res\\navigation\\nav_graph.xml","javaFiles":["com.miedo.detodoaqui.ProfileFragmentDirections"]}]

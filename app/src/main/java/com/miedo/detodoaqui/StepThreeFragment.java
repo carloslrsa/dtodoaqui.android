@@ -7,7 +7,9 @@ import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,8 +26,12 @@ public class StepThreeFragment extends Fragment implements Step {
 
     public static final String TAG = StepThreeFragment.class.getSimpleName();
 
+    private static final String ERROR_FONDO = "1";
+
     ImageView iv_fondo;
     ImageView iv_logo;
+    Button bt_logo;
+    Button bt_background;
 
     private static final int REQUEST_LOGO = 10;
     private static final int REQUEST_BACKGROUND = 20;
@@ -47,17 +53,20 @@ public class StepThreeFragment extends Fragment implements Step {
         iv_fondo = view.findViewById(R.id.iv_fondo);
         iv_logo = view.findViewById(R.id.iv_perfil);
 
-        view.findViewById(R.id.bt_pick_logo).setOnClickListener(new View.OnClickListener() {
+        bt_logo = view.findViewById(R.id.bt_pick_logo);
+        bt_background = view.findViewById(R.id.bt_pick_background);
+
+        bt_logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pickLogo(v);
+                pickPhoto(REQUEST_LOGO);
             }
         });
 
-        view.findViewById(R.id.bt_pick_background).setOnClickListener(new View.OnClickListener() {
+        bt_background.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pickBackground(v);
+                pickPhoto(REQUEST_BACKGROUND);
             }
         });
 
@@ -66,25 +75,13 @@ public class StepThreeFragment extends Fragment implements Step {
     }
 
 
-    public void pickLogo(View view) {
+    public void pickPhoto(int requestCode) {
 
         Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 
         if (galleryIntent.resolveActivity(getActivity().getPackageManager()) != null) {
             startActivityForResult(galleryIntent,
-                    REQUEST_LOGO);
-        }
-
-
-    }
-
-    public void pickBackground(View view) {
-
-        Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-
-        if (galleryIntent.resolveActivity(getActivity().getPackageManager()) != null) {
-            startActivityForResult(galleryIntent,
-                    REQUEST_BACKGROUND);
+                    requestCode);
         }
 
 
@@ -135,7 +132,12 @@ public class StepThreeFragment extends Fragment implements Step {
     @Nullable
     @Override
     public VerificationError verifyStep() {
-        return null;
+
+        VerificationError ve = null;
+        if (fondoReal == null) {
+            ve = new VerificationError(ERROR_FONDO);
+        }
+        return ve;
     }
 
     @Override
@@ -153,6 +155,12 @@ public class StepThreeFragment extends Fragment implements Step {
 
     @Override
     public void onError(@NonNull VerificationError error) {
+
+        String err = error.getErrorMessage();
+        if (err.equals(ERROR_FONDO)) {
+            bt_background.setError("GAAAAAA");
+            Toast.makeText(getContext(), "Debes cargar al menos una foto de fondo", Toast.LENGTH_SHORT).show();
+        }
 
     }
 

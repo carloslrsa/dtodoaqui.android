@@ -26,7 +26,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.miedo.detodoaqui.RegistroFakeActivity" />
+        <activity android:name="com.miedo.detodoaqui.RegisterEstablishmentActivity" />
         <activity android:name="com.miedo.detodoaqui.LoginUserActivity" />
         <activity
             android:name="com.miedo.detodoaqui.RegisterUserActivity"
@@ -40,15 +40,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.miedo.detodoaqui.MainActivity" />
-        </activity>
-        <activity
-            android:name="com.miedo.detodoaqui.RegisterEstablishmentActivity"
-            android:label="@string/title_activity_register_establishment"
-            android:parentActivityName="com.miedo.detodoaqui.EstablishmentsActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.miedo.detodoaqui.EstablishmentsActivity" />
         </activity>
         <activity
             android:name="com.miedo.detodoaqui.MainActivity"
