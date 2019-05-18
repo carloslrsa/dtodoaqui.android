@@ -146,7 +146,7 @@ public class StepOneFragment extends Fragment implements MultiSpinner.MultiSpinn
         //bundle.putBooleanArray("categorias", seleccionados);
 
         // FAKE
-        ((RegisterEstablishmentActivity) getActivity()).loadData(bundle);
+        ((RegisterEstablishmentActivity) getActivity()).loadData(bundle, RegisterEstablishmentActivity.STEP_ONE);
 
 
     }

@@ -89,11 +89,14 @@ public class StepTwoFragment extends Fragment implements Step {
 
                 for (AddressComponent a : selectedPlace.getAddressComponents().asList()) {
                     if (a.getTypes().equals(Arrays.asList("locality", "political"))) {
-                        //Log.i(TAG, a.getName());
-
+                        Log.i(TAG, "distrito " + a.getName());
                     }
-                    Log.i(TAG, a.getName() + " : " + a.getTypes());
+                    //Log.i(TAG, a.getName() + " : " + a.getTypes());
                 }
+
+                Log.i(TAG, "direccion" + place.getAddress());
+                Log.i(TAG, "latitud : " + place.getLatLng().latitude);
+                Log.i(TAG, "longitud : " + place.getLatLng().longitude);
 
                 //Log.i(TAG, "es nulo la lon lat ? : " + (place.getLatLng() == null));
             }
@@ -131,7 +134,7 @@ public class StepTwoFragment extends Fragment implements Step {
             ve = new VerificationError("Debes elegir una dirección válida.");
         }
 
-        if(ve == null){
+        if (ve == null) {
 
         }
 
@@ -150,9 +153,7 @@ public class StepTwoFragment extends Fragment implements Step {
 
     }
 
-    public void updateData(){
-
-
+    public void updateData() {
 
 
     }
