@@ -80,6 +80,9 @@ public class ProfileFragment extends Fragment {
         Button bt_login = view.findViewById(R.id.bt_login);
         bt_login.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.loginuser_dest));
 
+        Button bt_myprofile = view.findViewById(R.id.bt_update);
+        bt_myprofile.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.updateuser_dest));
+
         return view;
     }
 

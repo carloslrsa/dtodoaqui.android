@@ -22,4 +22,9 @@ public class ProfileFragmentDirections {
   public static NavDirections actionProfileDestToLoginuserDest() {
     return new ActionOnlyNavDirections(R.id.action_profile_dest_to_loginuser_dest);
   }
+
+  @NonNull
+  public static NavDirections actionProfileDestToUpdateuserDest() {
+    return new ActionOnlyNavDirections(R.id.action_profile_dest_to_updateuser_dest);
+  }
 }

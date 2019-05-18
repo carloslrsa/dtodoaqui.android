@@ -38,22 +38,22 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int auto = 0x7f090044;
-        public static final int baseline = 0x7f090046;
-        public static final int center = 0x7f090053;
-        public static final int column = 0x7f09005d;
-        public static final int column_reverse = 0x7f09005e;
-        public static final int flex_end = 0x7f09008d;
-        public static final int flex_start = 0x7f09008e;
-        public static final int nowrap = 0x7f0900da;
-        public static final int row = 0x7f0900f3;
-        public static final int row_reverse = 0x7f0900f4;
-        public static final int space_around = 0x7f090116;
-        public static final int space_between = 0x7f090117;
-        public static final int space_evenly = 0x7f090118;
-        public static final int stretch = 0x7f090125;
-        public static final int wrap = 0x7f090165;
-        public static final int wrap_reverse = 0x7f090167;
+        public static final int auto = 0x7f090046;
+        public static final int baseline = 0x7f090048;
+        public static final int center = 0x7f090056;
+        public static final int column = 0x7f090060;
+        public static final int column_reverse = 0x7f090061;
+        public static final int flex_end = 0x7f090093;
+        public static final int flex_start = 0x7f090094;
+        public static final int nowrap = 0x7f0900e2;
+        public static final int row = 0x7f0900fc;
+        public static final int row_reverse = 0x7f0900fd;
+        public static final int space_around = 0x7f09011f;
+        public static final int space_between = 0x7f090120;
+        public static final int space_evenly = 0x7f090121;
+        public static final int stretch = 0x7f09012e;
+        public static final int wrap = 0x7f09016f;
+        public static final int wrap_reverse = 0x7f090171;
     }
     public static final class styleable {
         private styleable() {}

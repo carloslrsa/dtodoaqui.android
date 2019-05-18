@@ -1272,12 +1272,14 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_profile_dest_to_loginuser_dest
 id action_profile_dest_to_registerUserActivity
+id action_profile_dest_to_updateuser_dest
 id action_profile_to_establishments
 id action_text
 id actions
 id activity_chooser_view_content
 id activity_dest
 id add
+id addressUserUpdateET
 id alertTitle
 id all
 id always
@@ -1293,6 +1295,7 @@ id bt_login
 id bt_pick_background
 id bt_pick_logo
 id bt_register
+id bt_update
 id buttonPanel
 id cancel_action
 id card_view
@@ -1316,10 +1319,12 @@ id content_fade
 id content_overlay
 id content_progress
 id coordinator
+id countryUserUpdateSpinner
 id custom
 id customPanel
 id decor_content_parent
 id default_activity_button
+id descriptionUserUpdateET
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1349,6 +1354,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fab
+id facebookUserUpdateET
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1380,6 +1386,7 @@ id iv_perfil
 id keywordSearchET
 id labeled
 id largeLabel
+id lastnameUserUpdateET
 id left
 id line1
 id line3
@@ -1420,6 +1427,7 @@ id ms_stepTitle
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id nameUserUpdateET
 id nav_controller_view_tag
 id nav_graph
 id nav_host_fragment
@@ -1442,6 +1450,7 @@ id parent_matrix
 id passConfUserRegisterET
 id passwordUserRegisterET
 id percent
+id phoneUserUpdateET
 id pin
 id profile_dest
 id progressSearchBar
@@ -1565,6 +1574,7 @@ id tv_title_establishment
 id uniform
 id unlabeled
 id up
+id updateuser_dest
 id useLogo
 id usernameUserRegisterET
 id view
@@ -1628,6 +1638,7 @@ layout activity_login_user
 layout activity_main
 layout activity_register_establishment
 layout activity_register_user
+layout activity_update_user
 layout cardview_establishment_search
 layout cardview_establishment_user
 layout custom_dialog

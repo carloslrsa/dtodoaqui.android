@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_profile_dest_to_loginuser_dest"
             app:destination="@id/loginuser_dest" />
+        <action
+            android:id="@+id/action_profile_dest_to_updateuser_dest"
+            app:destination="@id/updateuser_dest" />
     </fragment>
     <fragment
         android:id="@+id/activity_dest"
@@ -40,10 +43,14 @@
         android:name="com.miedo.detodoaqui.RegisterUserActivity"
         android:label="activity_register_user"
         tools:layout="@layout/activity_register_user" />
-
     <activity
         android:id="@+id/loginuser_dest"
         android:name="com.miedo.detodoaqui.LoginUserActivity"
         android:label="activity_login_user"
         tools:layout="@layout/activity_login_user" />
+    <activity
+        android:id="@+id/updateuser_dest"
+        android:name="com.miedo.detodoaqui.UpdateUserActivity"
+        android:label="activity_update_user"
+        tools:layout="@layout/activity_update_user" />
 </navigation>

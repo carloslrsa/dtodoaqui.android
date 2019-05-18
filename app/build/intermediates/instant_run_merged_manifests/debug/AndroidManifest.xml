@@ -25,6 +25,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.miedo.detodoaqui.UpdateUserActivity" />
         <activity android:name="com.miedo.detodoaqui.RegisterEstablishmentActivity" />
         <activity android:name="com.miedo.detodoaqui.LoginUserActivity" />
         <activity
