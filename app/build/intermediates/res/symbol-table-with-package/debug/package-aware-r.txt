@@ -1740,6 +1740,7 @@ id blocking
 id bottom
 id bt_establishments
 id bt_login
+id bt_logout
 id bt_pick_background
 id bt_pick_logo
 id bt_register

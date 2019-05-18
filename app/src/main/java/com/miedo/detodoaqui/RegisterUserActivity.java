@@ -64,7 +64,7 @@ public class RegisterUserActivity extends AppCompatActivity {
 
         viewModel = ViewModelProviders.of(this).get(UserViewModel.class);
 
-        viewModel.getUserRegister().observe(this, new Observer<User>() {
+        viewModel.getUser().observe(this, new Observer<User>() {
             @Override
             public void onChanged(User user) {
                 if(user == null){

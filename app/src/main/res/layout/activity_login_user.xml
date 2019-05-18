@@ -40,7 +40,8 @@
                 android:background="@drawable/edit_round"
                 android:drawableLeft="@drawable/ic_user"
                 android:hint="Nombre de usuario"
-                android:paddingLeft="10dp" />
+                android:paddingLeft="10dp"
+                android:text="prueba2" />
 
             <EditText
                 android:id="@+id/passwordUserRegisterET"
@@ -53,7 +54,8 @@
                 android:drawableLeft="@drawable/ic_password"
                 android:hint="Contraseña"
                 android:inputType="textPassword"
-                android:paddingLeft="5dp" />
+                android:paddingLeft="5dp"
+                android:text="prueba123" />
 
         </LinearLayout>
 

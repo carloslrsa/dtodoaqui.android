@@ -9,6 +9,16 @@ public class SessionManager {
 
     private static final String PREFERENCE_NAME = "DTodoAquiClient";
 
+    // Singleton
+    private static SessionManager instance = null;
+
+    public static SessionManager getInstance(){
+        if(instance == null){
+            instance = new SessionManager();
+        }
+        return instance;
+    }
+
     // String keys
     public static final String USER_NAME = "user_name";
     public static final String IS_LOGGED = "user_login";
@@ -19,12 +29,21 @@ public class SessionManager {
     private SharedPreferences.Editor editor;
     private Context context;
 
-    public SessionManager(Context context) {
+    private User currentUser;
+
+    private SessionManager() {
+    }
+
+    public void SetContext(Context context){
         this.context = context;
         this.preferences = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
         this.editor = preferences.edit();
     }
 
+
+    public User getCurrentUser(){
+        return currentUser;
+    }
 
     /**
      * Inicia sesion marcando el login a true
@@ -37,6 +56,7 @@ public class SessionManager {
         editor.putString(USER_NAME, user.getUsername());
         editor.putString(USER_PASSWORD, user.getPassword());
         editor.commit();
+        currentUser = user;
     }
 
     /**
@@ -48,7 +68,7 @@ public class SessionManager {
         editor.remove(USER_NAME);
         editor.remove(USER_PASSWORD);
         editor.commit();
-
+        currentUser = null;
     }
 
 
@@ -57,9 +77,9 @@ public class SessionManager {
      * @return Objeto @{@link User} con los datos de la sesion.
      */
     public User getCurrentSession() {
-        User retorno = new User();
-        retorno.setUsername(preferences.getString(USER_NAME, "gaaaaa"));
-        retorno.setPassword(preferences.getString(USER_PASSWORD, "elmacaco"));
+        User retorno = new User("","","");
+        retorno.setUsername(preferences.getString(USER_NAME, ""));
+        retorno.setPassword(preferences.getString(USER_PASSWORD, ""));
 
         return retorno;
     }
@@ -69,6 +89,7 @@ public class SessionManager {
      *
      * @return true si la preferencia IS_LOGGED es true, false de lo contrario
      */
+
     public boolean isUserLogged() {
         return preferences.getBoolean(IS_LOGGED, false);
     }

@@ -5,12 +5,12 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.miedo.detodoaqui.Data.Local.SessionManager;
 import com.miedo.detodoaqui.Data.User;
 import com.miedo.detodoaqui.Viewmodels.UserViewModel;
 
@@ -23,6 +23,8 @@ public class LoginUserActivity extends AppCompatActivity {
     private EditText et_password;
 
     private UserViewModel viewModel;
+
+    private static boolean flagOpen = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,19 +54,34 @@ public class LoginUserActivity extends AppCompatActivity {
 
         viewModel = ViewModelProviders.of(this).get(UserViewModel.class);
 
-        viewModel.getUserLogin().observe(this, new Observer<User>() {
+        viewModel.getUser().observe(this, new Observer<User>() {
             @Override
             public void onChanged(User user) {
                 if(user == null){
                     //Login fallido
-                    et_username.setEnabled(true);
-                    et_password.setEnabled(true);
-                    Toast.makeText(LoginUserActivity.this, "Login fallido", Toast.LENGTH_SHORT).show();
+                    if(flagOpen){
+                        et_username.setEnabled(true);
+                        et_password.setEnabled(true);
+                        Toast.makeText(LoginUserActivity.this, "Login fallido", Toast.LENGTH_SHORT).show();
+                        flagOpen = false;
+                    }else{
+                        flagOpen = true;
+                    }
+
                 }else{
                     //Login exitoso
-                    Toast.makeText(LoginUserActivity.this, "Login exitoso", Toast.LENGTH_SHORT).show();
-                    //SessionManager.getInstance().StartSession(user);
-                    finish();
+                    if(flagOpen){
+                        if(user.getProfile() == null){
+                            Toast.makeText(LoginUserActivity.this, "Login exitoso, sin profile", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(LoginUserActivity.this, "Login exitoso, con profile", Toast.LENGTH_SHORT).show();
+                        }
+                        //SessionManager.getInstance().StartSession(user);
+                        flagOpen = false;
+                        finish();
+                    }else{
+                        flagOpen = true;
+                    }
                 }
             }
         });

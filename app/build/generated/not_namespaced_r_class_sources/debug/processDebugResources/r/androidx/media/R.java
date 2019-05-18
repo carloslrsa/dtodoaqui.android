@@ -91,6 +91,7 @@ public final class R {
         public static final int action_image = 0x7f090032;
         public static final int action_text = 0x7f09003c;
         public static final int actions = 0x7f09003d;
+<<<<<<< HEAD
         public static final int async = 0x7f090047;
         public static final int blocking = 0x7f09004d;
         public static final int cancel_action = 0x7f090056;
@@ -118,6 +119,35 @@ public final class R {
         public static final int text2 = 0x7f090156;
         public static final int time = 0x7f09016c;
         public static final int title = 0x7f09016d;
+=======
+        public static final int async = 0x7f090045;
+        public static final int blocking = 0x7f09004a;
+        public static final int cancel_action = 0x7f090054;
+        public static final int chronometer = 0x7f09005c;
+        public static final int end_padder = 0x7f090080;
+        public static final int forever = 0x7f090096;
+        public static final int icon = 0x7f09009e;
+        public static final int icon_group = 0x7f09009f;
+        public static final int info = 0x7f0900a3;
+        public static final int italic = 0x7f0900a5;
+        public static final int line1 = 0x7f0900af;
+        public static final int line3 = 0x7f0900b0;
+        public static final int media_actions = 0x7f0900b6;
+        public static final int normal = 0x7f0900df;
+        public static final int notification_background = 0x7f0900e0;
+        public static final int notification_main_column = 0x7f0900e1;
+        public static final int notification_main_column_container = 0x7f0900e2;
+        public static final int right_icon = 0x7f0900fb;
+        public static final int right_side = 0x7f0900fc;
+        public static final int status_bar_latest_event_content = 0x7f09012d;
+        public static final int tag_transition_group = 0x7f090139;
+        public static final int tag_unhandled_key_event_manager = 0x7f09013a;
+        public static final int tag_unhandled_key_listeners = 0x7f09013b;
+        public static final int text = 0x7f09013c;
+        public static final int text2 = 0x7f09013d;
+        public static final int time = 0x7f090154;
+        public static final int title = 0x7f090155;
+>>>>>>> 5b9f09c3e0814c26b27d6d9571d58ef1f59e7b36
     }
     public static final class integer {
         private integer() {}
