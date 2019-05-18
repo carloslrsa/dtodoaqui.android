@@ -1561,6 +1561,7 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable background_default
 drawable background_preview
+drawable border_gray
 drawable border_text_input_layout
 drawable button_round
 drawable category_round_border
@@ -1615,6 +1616,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_not_found
 drawable ic_password
 drawable ic_profile
+drawable ic_right_direction
 drawable ic_search
 drawable ic_star_black_24dp
 drawable ic_timeline
@@ -1762,6 +1764,7 @@ id collapseActionView
 id column
 id column_reverse
 id container
+id contenido
 id content
 id contentPanel
 id content_fade
@@ -1831,6 +1834,7 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id iv_background
 id iv_entablishment_picture
 id iv_fondo
 id iv_perfil
@@ -1842,6 +1846,7 @@ id left
 id light
 id line1
 id line3
+id linearLayout2
 id listMode
 id list_item
 id locationSearchET
@@ -1928,6 +1933,8 @@ id progress_bar
 id progress_circular
 id progress_horizontal
 id radio
+id ratingBar
+id ratingBar2
 id rb_rating
 id recycler
 id registerUserButton
@@ -2040,6 +2047,7 @@ id transition_transform
 id tv_end_time
 id tv_number_reviews
 id tv_start_time
+id tv_state
 id tv_title_establishment
 id uniform
 id unlabeled
@@ -2105,6 +2113,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_establishment_details
 layout activity_establishments
 layout activity_login_user
 layout activity_main
@@ -2113,6 +2122,7 @@ layout activity_register_user
 layout activity_update_user
 layout cardview_establishment_search
 layout cardview_establishment_user
+layout content_establishment_detail
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

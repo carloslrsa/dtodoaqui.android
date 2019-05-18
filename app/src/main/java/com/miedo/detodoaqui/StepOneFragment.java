@@ -1,32 +1,27 @@
 package com.miedo.detodoaqui;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import com.google.android.flexbox.FlexboxLayout;
 import com.google.android.material.textfield.TextInputEditText;
-import com.miedo.detodoaqui.Adapters.StepperAdapter;
 import com.miedo.detodoaqui.Utils.MultiSpinner;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class StepOneFragment extends Fragment implements MultiSpinner.MultiSpinnerListener, Step, StepperAdapter.StepDataListener {
+public class StepOneFragment extends Fragment implements MultiSpinner.MultiSpinnerListener, Step {
 
     private static final String TAG = StepOneFragment.class.getSimpleName();
 
@@ -117,6 +112,10 @@ public class StepOneFragment extends Fragment implements MultiSpinner.MultiSpinn
             }
         }
 
+        if (ve == null) {
+            updateData();
+        }
+
         return ve;
     }
 
@@ -139,16 +138,16 @@ public class StepOneFragment extends Fragment implements MultiSpinner.MultiSpinn
 
     }
 
-
-    @Override
-    public Bundle getData() {
+    public void updateData() {
 
         Bundle bundle = new Bundle();
 
         bundle.putString("nombre", et_nombre.getText().toString().trim());
-        bundle.putBooleanArray("categorias", seleccionados);
+        //bundle.putBooleanArray("categorias", seleccionados);
 
-        return bundle;
+        // FAKE
+        ((RegisterEstablishmentActivity) getActivity()).loadData(bundle);
+
 
     }
 }

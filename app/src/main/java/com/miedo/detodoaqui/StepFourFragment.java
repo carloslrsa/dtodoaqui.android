@@ -24,7 +24,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
-public class StepFourFragment extends Fragment implements MultiSpinner.MultiSpinnerListener, Step, StepperAdapter.StepDataListener {
+public class StepFourFragment extends Fragment implements MultiSpinner.MultiSpinnerListener, Step {
 
 
     private int hora_inicio = -1, minuto_inicio = -1, hora_fin = -1, minuto_fin = -1;
@@ -198,7 +198,6 @@ public class StepFourFragment extends Fragment implements MultiSpinner.MultiSpin
 
     }
 
-    @Override
     public Bundle getData() {
         Bundle bundle = new Bundle();
 
