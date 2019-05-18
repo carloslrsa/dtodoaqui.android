@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UpdateUserActivity"
+        <activity
+            android:name=".UpdateUserActivity"
             android:windowSoftInputMode="stateHidden"></activity>
         <activity android:name=".RegisterEstablishmentActivity" />
         <activity android:name=".LoginUserActivity" />
@@ -43,8 +44,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDKHfwYLXTSq63-1_mCu0Ci_VP9Rnhi_M4"/>
     </application>
 
 </manifest>

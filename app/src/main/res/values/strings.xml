@@ -4,6 +4,8 @@
     <string name="nav_search_title">Buscar</string>
     <string name="nav_activity_title">Actividad</string>
 
+    <string name="api_key_google_places">AIzaSyDKHfwYLXTSq63-1_mCu0Ci_VP9Rnhi_M4</string>
+
     <string-array name="categories_array">
         <item>Seleccione una categoría</item>
         <item>Bar</item>
