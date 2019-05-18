@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-47:12
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
 MERGED from [androidx.navigation:navigation-fragment:2.1.0-alpha02] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\36e4a0bb71050ef32313434b3ffb3df2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui:2.1.0-alpha02] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\de97bb239327d0ebc0ea38eda393db66\AndroidManifest.xml:17:1-22:12
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\1de6955229944bd8b3bfb471e49560d8\AndroidManifest.xml:2:1-14:12
@@ -50,22 +50,22 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\CARLOS\.gradle\c
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\1ec2d97136b171ccf2731276d3e1abff\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\1cc2a3d482e1b94757aeff3e72000cca\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\696d3f8090a61b53e9762d487dc1ba31\AndroidManifest.xml:17:1-22:12
-INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
 	package
 		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:4:5-35
 		INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml
 		INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-47:12
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
 		INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml
 	xmlns:dist
 		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:3:5-61
 	android:versionCode
 		INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-47:12
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
 		INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:11-69
@@ -86,7 +86,7 @@ ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:10:22-62
 application
-ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:12:5-45:19
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:12:5-46:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\1de6955229944bd8b3bfb471e49560d8\AndroidManifest.xml:7:5-12:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\1de6955229944bd8b3bfb471e49560d8\AndroidManifest.xml:7:5-12:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0-alpha04] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\178a6a9a937e348f867b8548a2c7f88a\AndroidManifest.xml:22:5-23:19
@@ -118,59 +118,61 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha02] C:\
 	android:theme
 		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:18:9-40
 activity#com.miedo.detodoaqui.UpdateUserActivity
-ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:19:9-65
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:19:9-20:66
+	android:windowSoftInputMode
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:20:13-54
 	android:name
 		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:19:19-53
 activity#com.miedo.detodoaqui.RegisterEstablishmentActivity
-ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:20:9-67
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:21:9-67
 	android:name
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:20:19-64
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:21:19-64
 activity#com.miedo.detodoaqui.LoginUserActivity
-ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:21:9-55
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:22:9-55
 	android:name
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:21:19-52
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:22:19-52
 activity#com.miedo.detodoaqui.RegisterUserActivity
-ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:22:9-25:59
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:23:9-26:59
 	android:label
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:24:13-65
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:25:13-65
 	android:theme
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:25:13-56
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:26:13-56
 	android:name
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:23:13-49
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:24:13-49
 activity#com.miedo.detodoaqui.EstablishmentsActivity
-ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:26:9-34:20
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:27:9-35:20
 	android:parentActivityName
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:29:13-55
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:30:13-55
 	android:label
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:28:13-66
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:29:13-66
 	android:theme
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:30:13-56
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:31:13-56
 	android:name
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:27:13-51
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:28:13-51
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:31:13-33:69
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:32:13-34:69
 	android:value
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:33:17-66
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:34:17-66
 	android:name
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:32:17-63
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:33:17-63
 activity#com.miedo.detodoaqui.MainActivity
-ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:35:9-44:20
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:36:9-45:20
 	android:label
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:37:13-45
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:38:13-45
 	android:windowSoftInputMode
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:38:13-54
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:39:13-54
 	android:name
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:36:13-41
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:37:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:39:13-43:29
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:40:13-44:29
 action#android.intent.action.MAIN
-ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:40:17-69
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:41:17-69
 	android:name
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:40:25-66
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:41:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:42:17-77
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:43:17-77
 	android:name
-		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:42:27-74
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:43:27-74
 uses-sdk
 INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml
