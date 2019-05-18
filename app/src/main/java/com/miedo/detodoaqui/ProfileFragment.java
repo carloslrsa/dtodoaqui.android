@@ -5,12 +5,19 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.miedo.detodoaqui.Data.User;
+import com.miedo.detodoaqui.Viewmodels.UserViewModel;
 
 
 /**
@@ -32,6 +39,8 @@ public class ProfileFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    private UserViewModel viewModel;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -82,6 +91,41 @@ public class ProfileFragment extends Fragment {
 
         Button bt_myprofile = view.findViewById(R.id.bt_update);
         bt_myprofile.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.updateuser_dest));
+
+        Button bt_logout = view.findViewById(R.id.bt_logout);
+        bt_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewModel.Logout();
+                bt_registro.setVisibility(View.VISIBLE);
+                bt_login.setVisibility(View.VISIBLE);
+                bt_establecimientos.setVisibility(View.GONE);
+                bt_myprofile.setVisibility(View.GONE);
+                bt_logout.setVisibility(View.GONE);
+            }
+        });
+
+        //ViewModel
+
+        viewModel = ViewModelProviders.of(this).get(UserViewModel.class);
+
+        viewModel.getUser().observe(this, new Observer<User>() {
+            @Override
+            public void onChanged(User user) {
+                if(user == null){
+                    //Login fallido
+                    Log.i("Profile","Login fallido");
+                }else{
+                    //Login exitoso
+                    Log.i("Profile","Login exitoso");
+                    bt_registro.setVisibility(View.GONE);
+                    bt_login.setVisibility(View.GONE);
+                    bt_establecimientos.setVisibility(View.VISIBLE);
+                    bt_myprofile.setVisibility(View.VISIBLE);
+                    bt_logout.setVisibility(View.VISIBLE);
+                }
+            }
+        });
 
         return view;
     }

@@ -6,7 +6,7 @@ import java.io.UnsupportedEncodingException;
 
 public class JWTUtils {
 
-    private static JWT decode(String token) throws UnsupportedEncodingException {
+    public static JWT decode(String token) throws UnsupportedEncodingException {
         String[] split = token.split("\\.");
         String header = getJson(split[0]);
         String body = getJson(split[1]);
