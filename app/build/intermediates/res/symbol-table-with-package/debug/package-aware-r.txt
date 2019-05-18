@@ -1923,6 +1923,8 @@ id places_autocomplete_search_input
 id places_autocomplete_separator
 id places_autocomplete_try_again
 id profile_dest
+id progressBar
+id progressLayout
 id progressSearchBar
 id progress_bar
 id progress_circular
@@ -2011,6 +2013,7 @@ id textView10
 id textView11
 id textView12
 id textView13
+id textView14
 id textView2
 id textView3
 id textView4

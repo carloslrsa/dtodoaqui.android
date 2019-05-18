@@ -24,6 +24,8 @@ public class RegisterUserActivity extends AppCompatActivity {
 
     private UserViewModel viewModel;
 
+    private boolean flagRegister = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,8 +70,12 @@ public class RegisterUserActivity extends AppCompatActivity {
             public void onChanged(User user) {
                 if(user == null){
                     //Registro fallido
-                    Toast.makeText(RegisterUserActivity.this, "Registro fallido", Toast.LENGTH_SHORT).show();
-                    Log.i("Register","Registro fallido");
+                    if(flagRegister){
+                        flagRegister = false;
+                    }else{
+                        Toast.makeText(RegisterUserActivity.this, "Registro fallido", Toast.LENGTH_SHORT).show();
+                        Log.i("Register","Registro fallido");
+                    }
                 }else{
 
                     if(user.getId().equals("-")){
@@ -78,18 +84,10 @@ public class RegisterUserActivity extends AppCompatActivity {
                     }else{
                         //Registro exitoso
                         Toast.makeText(RegisterUserActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
+                        Log.i("Register","Registro exitoso");
                         finish();
                     }
-                    Log.i("Register","Registro exitoso");
-                }
-                if(user == null){
-                    //Registro fallido
-                    Toast.makeText(RegisterUserActivity.this, "Registro fallido", Toast.LENGTH_SHORT).show();
-                }else{
-                    //Registro exitoso
-                    Toast.makeText(RegisterUserActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
-                    //SessionManager.getInstance().StartSession(user);
-                    finish();
+
                 }
             }
         });

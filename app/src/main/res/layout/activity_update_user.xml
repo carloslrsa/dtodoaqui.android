@@ -21,12 +21,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginStart="32dp"
-                    android:layout_marginEnd="32dp"
                     android:layout_marginTop="32dp"
+                    android:layout_marginEnd="32dp"
                     android:layout_marginBottom="24dp"
                     android:background="@drawable/border_text_input_layout"
 
                     android:hint="Nombres"
+                    android:inputType="textPersonName"
                     android:paddingLeft="5dp" />
 
                 <EditText
@@ -39,6 +40,7 @@
                     android:background="@drawable/border_text_input_layout"
 
                     android:hint="Apellidos"
+                    android:inputType="textPersonName"
                     android:paddingLeft="10dp" />
 
                 <EditText
@@ -50,6 +52,7 @@
                     android:layout_marginBottom="24dp"
                     android:background="@drawable/border_text_input_layout"
                     android:hint="Teléfono"
+                    android:inputType="phone"
                     android:paddingLeft="10dp" />
 
                 <Spinner
@@ -72,6 +75,7 @@
                     android:layout_marginBottom="24dp"
                     android:background="@drawable/border_text_input_layout"
                     android:hint="Dirección"
+                    android:inputType="text"
                     android:paddingLeft="5dp" />
 
                 <EditText
@@ -90,11 +94,12 @@
                     android:id="@+id/facebookUserUpdateET"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:layout_marginTop="32dp"
                     android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
                     android:layout_marginEnd="32dp"
                     android:background="@drawable/border_text_input_layout"
                     android:hint="Facebook"
+                    android:inputType="textUri"
                     android:paddingLeft="5dp" />
 
                 <Button

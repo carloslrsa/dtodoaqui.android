@@ -40,6 +40,7 @@
                 android:background="@drawable/edit_round"
                 android:drawableLeft="@drawable/ic_user"
                 android:hint="Nombre de usuario"
+                android:inputType="text"
                 android:paddingLeft="10dp"
                 android:text="prueba2" />
 
