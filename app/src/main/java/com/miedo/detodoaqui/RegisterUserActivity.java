@@ -73,7 +73,7 @@ public class RegisterUserActivity extends AppCompatActivity {
                 }else{
                     //Registro exitoso
                     Toast.makeText(RegisterUserActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
-                    SessionManager.getInstance().StartSession(user);
+                    //SessionManager.getInstance().StartSession(user);
                     finish();
                 }
             }

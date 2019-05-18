@@ -63,7 +63,7 @@ public class LoginUserActivity extends AppCompatActivity {
                 }else{
                     //Login exitoso
                     Toast.makeText(LoginUserActivity.this, "Login exitoso", Toast.LENGTH_SHORT).show();
-                    SessionManager.getInstance().StartSession(user);
+                    //SessionManager.getInstance().StartSession(user);
                     finish();
                 }
             }
