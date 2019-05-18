@@ -14,8 +14,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.miedo.detodoaqui.Data.Local.SessionManager;
 import com.miedo.detodoaqui.Data.User;
 import com.miedo.detodoaqui.Viewmodels.UserViewModel;
 
@@ -39,6 +41,18 @@ public class ProfileFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    Button bt_establecimientos;
+
+    Button bt_registro;
+
+    Button bt_login;
+
+    Button bt_myprofile;
+
+    Button bt_logout;
+
+    LinearLayout progressLayout;
 
     private UserViewModel viewModel;
 
@@ -80,19 +94,21 @@ public class ProfileFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        Button bt_establecimientos = view.findViewById(R.id.bt_establishments);
+        progressLayout = view.findViewById(R.id.progressLayout);
+
+        bt_establecimientos = view.findViewById(R.id.bt_establishments);
         bt_establecimientos.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.establishments_dest));
 
-        Button bt_registro = view.findViewById(R.id.bt_register);
+        bt_registro = view.findViewById(R.id.bt_register);
         bt_registro.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.registeruser_dest));
 
-        Button bt_login = view.findViewById(R.id.bt_login);
+        bt_login = view.findViewById(R.id.bt_login);
         bt_login.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.loginuser_dest));
 
-        Button bt_myprofile = view.findViewById(R.id.bt_update);
+        bt_myprofile = view.findViewById(R.id.bt_update);
         bt_myprofile.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.updateuser_dest));
 
-        Button bt_logout = view.findViewById(R.id.bt_logout);
+        bt_logout = view.findViewById(R.id.bt_logout);
         bt_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -123,17 +139,40 @@ public class ProfileFragment extends Fragment {
                     } else {
                         //Login exitoso
                         Log.i("Profile Fragment", "Login exitoso");
-                        bt_registro.setVisibility(View.GONE);
-                        bt_login.setVisibility(View.GONE);
-                        bt_establecimientos.setVisibility(View.VISIBLE);
-                        bt_myprofile.setVisibility(View.VISIBLE);
-                        bt_logout.setVisibility(View.VISIBLE);
+
                     }
                 }
             }
         });
 
+        // Session
+
+        User user = SessionManager.getInstance().getCurrentSession();
+        if(!user.getUsername().equals(""))
+            viewModel.SincUser(user.getUsername(),user.getPassword());
+        else
+            ShowLogin();
         return view;
+    }
+
+    private void ShowLogin(){
+        bt_registro.setVisibility(View.VISIBLE);
+        bt_login.setVisibility(View.VISIBLE);
+        bt_establecimientos.setVisibility(View.GONE);
+        bt_myprofile.setVisibility(View.GONE);
+        bt_logout.setVisibility(View.GONE);
+
+        progressLayout.setVisibility(View.GONE);
+    }
+
+    private void ShowLogged(){
+        bt_registro.setVisibility(View.GONE);
+        bt_login.setVisibility(View.GONE);
+        bt_establecimientos.setVisibility(View.VISIBLE);
+        bt_myprofile.setVisibility(View.VISIBLE);
+        bt_logout.setVisibility(View.VISIBLE);
+
+        progressLayout.setVisibility(View.GONE);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

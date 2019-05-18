@@ -44,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
         SessionManager sessionManager = SessionManager.getInstance();
         sessionManager.SetContext(getApplicationContext());
 
-        User user = sessionManager.getCurrentSession();
-
         //ViewModel
 
         UserViewModel viewModel = ViewModelProviders.of(this).get(UserViewModel.class);
@@ -60,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
                     if(user.getId().equals("-")){
                         //Cierre sesión
-
+                        Toast.makeText(MainActivity.this, "Sesión Cerrada", Toast.LENGTH_SHORT).show();
                     }else{
                         //Login exitoso
                         Log.i("Profile Activity","Login exitoso");
@@ -68,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        if(!user.getUsername().equals(""))
-            viewModel.SincUser(user.getUsername(),user.getPassword());
+
+        viewModel.SincUser("","");
     }
 }

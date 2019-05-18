@@ -52,7 +52,7 @@ public class UserModel {
                     String token = fetchTokenResponse(response.body());
                     String userId = fetchUserIdResponse(token);
 
-                    getProfile(token, new User(userId ,username, password));
+                    getProfile(token, new User(userId ,username, password,email));
                 } else {
                     liveUser.setValue(null);
                 }
@@ -65,7 +65,7 @@ public class UserModel {
         });
     }
 
-    public void SincUser(String username, String password){
+    public void SincUser(String username, String password, String email){
         // Obtenemos el cuerpo del body para la peticion post en forma de string
         String jsonRequest = fetchStringLoginBody(username,password);
         // Creamos la instancia de la api
@@ -81,7 +81,7 @@ public class UserModel {
                     String token = fetchTokenResponse(response.body());
                     String userId = fetchUserIdResponse(token);
 
-                    getProfile(token, new User(userId ,username, password));
+                    getProfile(token, new User(userId ,username, password, email));
                 } else {
                     liveUser.setValue(null);
                 }
@@ -96,7 +96,7 @@ public class UserModel {
 
     public void Logout(){
         //liveUser = new MutableLiveData<>();
-        liveUser.setValue(new User("-","",""));
+        liveUser.setValue(new User("-","","",""));
         SessionManager.getInstance().CloseSession();
     }
 

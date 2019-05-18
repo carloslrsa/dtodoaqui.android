@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.miedo.detodoaqui.Data.User;
 import com.miedo.detodoaqui.Viewmodels.UserViewModel;
 
@@ -59,10 +60,15 @@ public class LoginUserActivity extends AppCompatActivity {
             public void onChanged(User user) {
                 if(user == null){
                     //Login fallido
-                    et_username.setEnabled(true);
-                    et_password.setEnabled(true);
-                    Toast.makeText(LoginUserActivity.this, "Login fallido", Toast.LENGTH_SHORT).show();
-                    Log.i("Login","Login fallido");
+                    if(flagOpen){
+                        flagOpen = false;
+                    }else{
+                        et_username.setEnabled(true);
+                        et_password.setEnabled(true);
+                        Toast.makeText(LoginUserActivity.this, "Usuario o Contraseña incorecta", Toast.LENGTH_SHORT).show();
+                        Log.i("Login","Login fallido");
+                    }
+
                 }else{
 
                     if(user.getId().equals("-")){
@@ -71,17 +77,17 @@ public class LoginUserActivity extends AppCompatActivity {
                     }else{
                         //Login exitoso
                         if(user.getProfile() == null){
-                            Toast.makeText(LoginUserActivity.this, "Login exitoso, sin profile", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(LoginUserActivity.this, "Login exitoso, sin profile", Toast.LENGTH_SHORT).show();
                         }else{
-                            Toast.makeText(LoginUserActivity.this, "Login exitoso, con profile", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(LoginUserActivity.this, "Login exitoso, con profile", Toast.LENGTH_SHORT).show();
                         }
                         Log.i("Login","Login exitoso");
+                        Toast.makeText(LoginUserActivity.this, "Login Exitoso", Toast.LENGTH_SHORT).show();
                         finish();
                     }
                 }
             }
         });
-
     }
 
 }
