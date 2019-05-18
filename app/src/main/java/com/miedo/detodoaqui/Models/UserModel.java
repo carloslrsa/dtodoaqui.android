@@ -65,7 +65,7 @@ public class UserModel {
         });
     }
 
-    public void Login(String username, String password){
+    public void SincUser(String username, String password){
         // Obtenemos el cuerpo del body para la peticion post en forma de string
         String jsonRequest = fetchStringLoginBody(username,password);
         // Creamos la instancia de la api
@@ -96,7 +96,7 @@ public class UserModel {
 
     public void Logout(){
         //liveUser = new MutableLiveData<>();
-        liveUser.setValue(null);
+        liveUser.setValue(new User("-","",""));
         SessionManager.getInstance().CloseSession();
     }
 
@@ -113,6 +113,23 @@ public class UserModel {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if (response.isSuccessful()) {
+
+                    // Se obtiene la id del profile
+                    JSONObject data = null;
+                    try {
+                        data = new JSONObject(response.body().string()).getJSONObject("data");
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                    try {
+                        profile.setId(data.getString("id"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    Log.i("ID",profile.getId());
                     user.setProfile(profile);
 
                     liveUser.setValue(user);
@@ -130,7 +147,8 @@ public class UserModel {
         });
     }
 
-    public void UpdateProfile(User user, Profile profile){
+    public void UpdateProfile(Profile profile){
+        User user = liveUser.getValue();
         if(user.getProfile() == null){
             CreateProfile(user,profile);
         }else{
@@ -141,7 +159,7 @@ public class UserModel {
             // Creamos el objeto RequestBody con el jsonRequest
             RequestBody body = RequestBody.create(MediaType.parse("application/json"), jsonRequest);
             // Realizamos la peticion asincrona
-            Call<ResponseBody> call = api.CreateProfile(body);
+            Call<ResponseBody> call = api.UpdateProfile(body,profile.getId());
             call.enqueue(new Callback<ResponseBody>() {
                 @Override
                 public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -155,7 +173,6 @@ public class UserModel {
                         liveUser.setValue(user);
                     }
                 }
-
                 @Override
                 public void onFailure(Call<ResponseBody> call, Throwable t) {
                     liveUser.setValue(null);
@@ -180,7 +197,8 @@ public class UserModel {
                     JSONObject jsonResponse = fetchProfileResponse(response.body());
                     if(jsonResponse != null){
                         try {
-                            profile = new Profile(jsonResponse.getString("id"),
+                            profile = new Profile(
+                                    jsonResponse.getString("id"),
                                     jsonResponse.getString("first_name"),
                                     jsonResponse.getString("last_name"),
                                     jsonResponse.getString("phone"),

@@ -1,9 +1,7 @@
 package com.miedo.detodoaqui;
 
-import android.app.Activity;
 import android.os.Bundle;
 
-import com.miedo.detodoaqui.Data.Local.SessionManager;
 import com.miedo.detodoaqui.Data.User;
 import com.miedo.detodoaqui.Viewmodels.UserViewModel;
 
@@ -11,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,7 +34,7 @@ public class RegisterUserActivity extends AppCompatActivity {
         et_email = findViewById(R.id.emailUserRegisterET);
         et_passwordconfirm = findViewById(R.id.passConfUserRegisterET);
 
-        Button bt_register = findViewById(R.id.registerUserButton);
+        Button bt_register = findViewById(R.id.updateUserButton);
 
         bt_register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +52,7 @@ public class RegisterUserActivity extends AppCompatActivity {
                     et_email.setEnabled(false);
                     et_passwordconfirm.setEnabled(false);
 
-                    viewModel.Register(username,email,password,password_confirm);
+                    viewModel.RegisterUser(username,email,password,password_confirm);
                 }else{
                     Toast.makeText(RegisterUserActivity.this, "Asegúrese de llenar correctamente los datos", Toast.LENGTH_SHORT).show();
                 }
@@ -67,6 +66,22 @@ public class RegisterUserActivity extends AppCompatActivity {
         viewModel.getUser().observe(this, new Observer<User>() {
             @Override
             public void onChanged(User user) {
+                if(user == null){
+                    //Registro fallido
+                    Toast.makeText(RegisterUserActivity.this, "Registro fallido", Toast.LENGTH_SHORT).show();
+                    Log.i("Register","Registro fallido");
+                }else{
+
+                    if(user.getId().equals("-")){
+                        //Cierre sesión
+
+                    }else{
+                        //Registro exitoso
+                        Toast.makeText(RegisterUserActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
+                    Log.i("Register","Registro exitoso");
+                }
                 if(user == null){
                     //Registro fallido
                     Toast.makeText(RegisterUserActivity.this, "Registro fallido", Toast.LENGTH_SHORT).show();

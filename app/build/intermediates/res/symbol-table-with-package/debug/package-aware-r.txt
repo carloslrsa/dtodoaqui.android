@@ -1937,7 +1937,6 @@ id ratingBar
 id ratingBar2
 id rb_rating
 id recycler
-id registerUserButton
 id registeruser_dest
 id resEstRatingBar
 id right
@@ -2052,6 +2051,7 @@ id tv_title_establishment
 id uniform
 id unlabeled
 id up
+id updateUserButton
 id updateuser_dest
 id useLogo
 id usernameUserRegisterET

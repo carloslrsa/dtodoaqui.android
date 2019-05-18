@@ -9,6 +9,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
+import retrofit2.http.Path;
 
 public interface CesarFakeAPI {
 
@@ -27,7 +28,7 @@ public interface CesarFakeAPI {
     @POST("/api/profile")
     public Call<ResponseBody> CreateProfile(@Body RequestBody body);
 
-    @PUT("/api/profile")
-    public Call<ResponseBody> UpdateProfile(@Body RequestBody body);
+    @PUT("/api/profile/{id}")
+    public Call<ResponseBody> UpdateProfile(@Body RequestBody body, @Path("id") String id);
 
 }

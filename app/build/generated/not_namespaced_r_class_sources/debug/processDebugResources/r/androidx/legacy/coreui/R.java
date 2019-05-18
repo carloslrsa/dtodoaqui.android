@@ -96,6 +96,7 @@ public final class R {
         public static final int blocking = 0x7f09004d;
         public static final int bottom = 0x7f09004e;
         public static final int chronometer = 0x7f09005f;
+<<<<<<< HEAD
         public static final int end = 0x7f090084;
         public static final int forever = 0x7f09009a;
         public static final int icon = 0x7f0900a3;
@@ -122,6 +123,34 @@ public final class R {
         public static final int time = 0x7f090172;
         public static final int title = 0x7f090173;
         public static final int top = 0x7f090177;
+=======
+        public static final int end = 0x7f090083;
+        public static final int forever = 0x7f090099;
+        public static final int icon = 0x7f0900a2;
+        public static final int icon_group = 0x7f0900a3;
+        public static final int info = 0x7f0900a8;
+        public static final int italic = 0x7f0900aa;
+        public static final int left = 0x7f0900b3;
+        public static final int line1 = 0x7f0900b5;
+        public static final int line3 = 0x7f0900b6;
+        public static final int none = 0x7f0900e4;
+        public static final int normal = 0x7f0900e5;
+        public static final int notification_background = 0x7f0900e6;
+        public static final int notification_main_column = 0x7f0900e7;
+        public static final int notification_main_column_container = 0x7f0900e8;
+        public static final int right = 0x7f090111;
+        public static final int right_icon = 0x7f090112;
+        public static final int right_side = 0x7f090113;
+        public static final int start = 0x7f090144;
+        public static final int tag_transition_group = 0x7f090151;
+        public static final int tag_unhandled_key_event_manager = 0x7f090152;
+        public static final int tag_unhandled_key_listeners = 0x7f090153;
+        public static final int text = 0x7f090155;
+        public static final int text2 = 0x7f090156;
+        public static final int time = 0x7f09016c;
+        public static final int title = 0x7f09016d;
+        public static final int top = 0x7f090171;
+>>>>>>> cb7e8adcf0fc175e5ab1a0d0027200a195abc129
     }
     public static final class integer {
         private integer() {}

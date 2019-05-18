@@ -39,4 +39,8 @@ public class  User{
     public void setProfile(Profile profile) {
         this.profile = profile;
     }
+
+    public String toString(){
+        return "ID: "+id+", UserName: "+username+", Password: "+password;
+    }
 }
