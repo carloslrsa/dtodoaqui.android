@@ -12,18 +12,32 @@ import com.miedo.detodoaqui.Adapters.StepperAdapter;
 import com.stepstone.stepper.StepperLayout;
 import com.stepstone.stepper.VerificationError;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class RegisterEstablishmentActivity extends AppCompatActivity implements StepperLayout.StepperListener {
 
     StepperLayout mStepperLayout;
+
+    JSONObject finalJSONRequest;
+
+    public static final int STEP_ONE = 1;
+    public static final int STEP_TWO = 2;
+    public static final int STEP_THREE = 3;
+    public static final int STEP_FOUR = 4;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_establishment);
-        
+
         mStepperLayout = (StepperLayout) findViewById(R.id.stepper);
         mStepperLayout.setAdapter(new StepperAdapter(getSupportFragmentManager(), this));
         mStepperLayout.setListener(this);
+
+        finalJSONRequest = new JSONObject();
+
 
     }
 
@@ -75,4 +89,35 @@ public class RegisterEstablishmentActivity extends AppCompatActivity implements 
                 .show();
 
     }
+
+    public void loadData(Bundle bundle, int step) {
+
+        try {
+
+            switch (step) {
+
+                case STEP_ONE:
+
+                    finalJSONRequest.put("name", bundle.getString("nombre", "default name"));
+
+                    break;
+                case STEP_TWO:
+                    break;
+
+                case STEP_THREE:
+
+
+                    break;
+
+
+            }
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
 }

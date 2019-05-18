@@ -1,6 +1,7 @@
 package com.miedo.detodoaqui.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,12 +14,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.miedo.detodoaqui.Data.EstablishmentSearch;
 import com.miedo.detodoaqui.Data.EstablishmentUser;
+import com.miedo.detodoaqui.EstablishmentDetailsActivity;
 import com.miedo.detodoaqui.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class EstablishmentSearchAdapter extends RecyclerView.Adapter<EstablishmentSearchAdapter.ViewHolder>  {
+public class EstablishmentSearchAdapter extends RecyclerView.Adapter<EstablishmentSearchAdapter.ViewHolder> {
 
     List<EstablishmentSearch> establishments;
     Context context;
@@ -48,6 +50,8 @@ public class EstablishmentSearchAdapter extends RecyclerView.Adapter<Establishme
             @Override
             public void onClick(View v) {
                 //Lleva a la vista de establecimientos
+                Intent intent = new Intent(context, EstablishmentDetailsActivity.class);
+                context.startActivity(intent);
             }
         });
     }

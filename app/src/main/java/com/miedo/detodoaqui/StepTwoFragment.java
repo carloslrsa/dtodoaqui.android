@@ -18,7 +18,9 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
 import com.google.android.gms.common.api.Status;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.android.libraries.places.api.Places;
+import com.google.android.libraries.places.api.model.AddressComponent;
 import com.google.android.libraries.places.api.model.Place;
 import com.google.android.libraries.places.api.model.TypeFilter;
 import com.google.android.libraries.places.api.net.PlacesClient;
@@ -31,9 +33,10 @@ import com.stepstone.stepper.VerificationError;
 import java.util.Arrays;
 
 
-public class StepTwoFragment extends Fragment implements Step, StepperAdapter.StepDataListener {
+public class StepTwoFragment extends Fragment implements Step {
 
     private static final String TAG = StepTwoFragment.class.getSimpleName();
+    Place selectedPlace;
 
 
     // Cosntructor necesario
@@ -61,7 +64,7 @@ public class StepTwoFragment extends Fragment implements Step, StepperAdapter.St
         final View view = inflater.inflate(R.layout.fragment_register_step2, container, false);
 
         // Initialize Places.
-        Places.initialize(getContext(), "AIzaSyDKHfwYLXTSq63-1_mCu0Ci_VP9Rnhi_M4");
+        Places.initialize(getContext(), getString(R.string.api_key_google_places));
 
 
         PlacesClient client = Places.createClient(getContext());
@@ -71,7 +74,7 @@ public class StepTwoFragment extends Fragment implements Step, StepperAdapter.St
                 getChildFragmentManager().findFragmentById(R.id.autocomplete_fragment);
 
         // Specify the types of place data to return.
-        autocompleteFragment.setPlaceFields(Arrays.asList(Place.Field.ID, Place.Field.NAME, Place.Field.ADDRESS));
+        autocompleteFragment.setPlaceFields(Arrays.asList(Place.Field.ADDRESS_COMPONENTS, Place.Field.ID, Place.Field.NAME, Place.Field.ADDRESS, Place.Field.LAT_LNG));
 
         autocompleteFragment.setCountry("pe");
         autocompleteFragment.setTypeFilter(TypeFilter.ADDRESS);
@@ -82,6 +85,20 @@ public class StepTwoFragment extends Fragment implements Step, StepperAdapter.St
             public void onPlaceSelected(Place place) {
                 // TODO: Get info about the selected place.
                 Log.i(TAG, "Place: " + place.getName() + ", " + place.getId());
+                selectedPlace = place;
+
+                for (AddressComponent a : selectedPlace.getAddressComponents().asList()) {
+                    if (a.getTypes().equals(Arrays.asList("locality", "political"))) {
+                        Log.i(TAG, "distrito " + a.getName());
+                    }
+                    //Log.i(TAG, a.getName() + " : " + a.getTypes());
+                }
+
+                Log.i(TAG, "direccion" + place.getAddress());
+                Log.i(TAG, "latitud : " + place.getLatLng().latitude);
+                Log.i(TAG, "longitud : " + place.getLatLng().longitude);
+
+                //Log.i(TAG, "es nulo la lon lat ? : " + (place.getLatLng() == null));
             }
 
             @Override
@@ -90,6 +107,19 @@ public class StepTwoFragment extends Fragment implements Step, StepperAdapter.St
                 Log.i(TAG, "An error occurred: " + status);
             }
         });
+
+        autocompleteFragment.getView().findViewById(R.id.places_autocomplete_clear_button)
+                .setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        autocompleteFragment.setText("");
+                        selectedPlace = null;
+                        view.setVisibility(View.GONE);
+
+                    }
+                });
+
+
         return view;
 
     }
@@ -99,6 +129,14 @@ public class StepTwoFragment extends Fragment implements Step, StepperAdapter.St
     @Override
     public VerificationError verifyStep() {
         VerificationError ve = null;
+
+        if (selectedPlace == null) {
+            ve = new VerificationError("Debes elegir una dirección válida.");
+        }
+
+        if (ve == null) {
+
+        }
 
         return ve;
     }
@@ -111,12 +149,25 @@ public class StepTwoFragment extends Fragment implements Step, StepperAdapter.St
     @Override
     public void onError(@NonNull VerificationError error) {
 
+        Toast.makeText(getContext(), error.getErrorMessage(), Toast.LENGTH_SHORT).show();
 
     }
 
-    @Override
+    public void updateData() {
+
+
+    }
+
     public Bundle getData() {
         Bundle bundle = new Bundle();
+
+        for (AddressComponent a : selectedPlace.getAddressComponents().asList()) {
+            if (a.getTypes().equals(Arrays.asList("locality", "political"))) {
+                //Log.i(TAG, a.getName());
+
+            }
+            Log.i(TAG, a.getName() + " : " + a.getTypes());
+        }
 
         return bundle;
     }

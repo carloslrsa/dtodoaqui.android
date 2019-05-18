@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+#Sat May 18 14:16:28 COT 2019
+=======
 #Sat May 18 12:27:27 COT 2019
+>>>>>>> cb7e8adcf0fc175e5ab1a0d0027200a195abc129
 path.1=classes.dex
 path.0=classes.dex
 renamed.10=classes11.dex

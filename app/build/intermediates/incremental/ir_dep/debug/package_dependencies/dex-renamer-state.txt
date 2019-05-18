@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+#Sat May 18 12:29:18 COT 2019
+base.0=C\:\\Users\\Billy\\Documents\\AndroidProjects\\DeTodoAqui\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+=======
 #Sat May 18 11:28:25 COT 2019
 base.0=C\:\\Users\\carlo\\Desktop\\TCS\\DTODOAQUI\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+>>>>>>> cb7e8adcf0fc175e5ab1a0d0027200a195abc129
 path.0=classes.dex
 renamed.0=classes.dex

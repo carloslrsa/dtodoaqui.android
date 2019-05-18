@@ -23,7 +23,7 @@ import com.stepstone.stepper.VerificationError;
 
 import java.io.IOException;
 
-public class StepThreeFragment extends Fragment implements Step, StepperAdapter.StepDataListener {
+public class StepThreeFragment extends Fragment implements Step {
 
     public static final String TAG = StepThreeFragment.class.getSimpleName();
 
@@ -165,8 +165,6 @@ public class StepThreeFragment extends Fragment implements Step, StepperAdapter.
 
     }
 
-
-    @Override
     public Bundle getData() {
         return null;
     }

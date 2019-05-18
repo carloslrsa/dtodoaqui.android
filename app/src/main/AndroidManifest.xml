@@ -16,9 +16,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".EstablishmentDetailsActivity"></activity>
         <activity
             android:name=".UpdateUserActivity"
-            android:windowSoftInputMode="stateHidden"></activity>
+            android:windowSoftInputMode="stateHidden" />
         <activity android:name=".RegisterEstablishmentActivity" />
         <activity android:name=".LoginUserActivity" />
         <activity
