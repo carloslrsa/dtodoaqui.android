@@ -115,14 +115,20 @@ public class ProfileFragment extends Fragment {
                 if(user == null){
                     //Login fallido
                     Log.i("Profile","Login fallido");
-                }else{
-                    //Login exitoso
-                    Log.i("Profile","Login exitoso");
-                    bt_registro.setVisibility(View.GONE);
-                    bt_login.setVisibility(View.GONE);
-                    bt_establecimientos.setVisibility(View.VISIBLE);
-                    bt_myprofile.setVisibility(View.VISIBLE);
-                    bt_logout.setVisibility(View.VISIBLE);
+                }else {
+
+                    if (user.getId().equals("-")) {
+                        //Cierre sesión
+
+                    } else {
+                        //Login exitoso
+                        Log.i("Profile Fragment", "Login exitoso");
+                        bt_registro.setVisibility(View.GONE);
+                        bt_login.setVisibility(View.GONE);
+                        bt_establecimientos.setVisibility(View.VISIBLE);
+                        bt_myprofile.setVisibility(View.VISIBLE);
+                        bt_logout.setVisibility(View.VISIBLE);
+                    }
                 }
             }
         });

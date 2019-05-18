@@ -98,7 +98,7 @@
                     android:paddingLeft="5dp" />
 
                 <Button
-                    android:id="@+id/registerUserButton"
+                    android:id="@+id/updateUserButton"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginStart="48dp"

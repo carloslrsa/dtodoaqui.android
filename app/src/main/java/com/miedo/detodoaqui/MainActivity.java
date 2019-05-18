@@ -4,6 +4,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.miedo.detodoaqui.Data.Local.SessionManager;
@@ -56,13 +57,18 @@ public class MainActivity extends AppCompatActivity {
                     //Login fallido
                     Log.i("Profile","Login fallido");
                 }else{
-                    //Login exitoso
-                    Log.i("Profile","Login exitoso");
+
+                    if(user.getId().equals("-")){
+                        //Cierre sesión
+
+                    }else{
+                        //Login exitoso
+                        Log.i("Profile Activity","Login exitoso");
+                    }
                 }
             }
         });
-
         if(!user.getUsername().equals(""))
-            viewModel.Login(user.getUsername(),user.getPassword());
+            viewModel.SincUser(user.getUsername(),user.getPassword());
     }
 }

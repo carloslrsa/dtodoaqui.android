@@ -10,6 +10,10 @@ public class Profile {
     private String description;
     private String facebookUrl;
 
+    public Profile(){
+
+    }
+
     public Profile(String id, String firstName, String lastName, String phone, String country, String address, String description, String facebookUrl) {
         this.id = id;
         this.firstName = firstName;
@@ -23,6 +27,10 @@ public class Profile {
 
     public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getFirstName() {

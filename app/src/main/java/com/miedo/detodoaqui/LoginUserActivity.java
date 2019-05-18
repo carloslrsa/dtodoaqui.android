@@ -24,7 +24,7 @@ public class LoginUserActivity extends AppCompatActivity {
 
     private UserViewModel viewModel;
 
-    private static boolean flagOpen = true;
+    private boolean flagOpen = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class LoginUserActivity extends AppCompatActivity {
         et_username = findViewById(R.id.usernameUserRegisterET);
         et_password = findViewById(R.id.passwordUserRegisterET);
 
-        Button bt_login = findViewById(R.id.registerUserButton);
+        Button bt_login = findViewById(R.id.updateUserButton);
 
         bt_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +45,7 @@ public class LoginUserActivity extends AppCompatActivity {
                 if(!username.isEmpty() && !password.isEmpty()){
                     et_username.setEnabled(false);
                     et_password.setEnabled(false);
-                    viewModel.Login(username,password);
+                    viewModel.SincUser(username,password);
                 }
             }
         });
@@ -59,28 +59,24 @@ public class LoginUserActivity extends AppCompatActivity {
             public void onChanged(User user) {
                 if(user == null){
                     //Login fallido
-                    if(flagOpen){
-                        et_username.setEnabled(true);
-                        et_password.setEnabled(true);
-                        Toast.makeText(LoginUserActivity.this, "Login fallido", Toast.LENGTH_SHORT).show();
-                        flagOpen = false;
-                    }else{
-                        flagOpen = true;
-                    }
-
+                    et_username.setEnabled(true);
+                    et_password.setEnabled(true);
+                    Toast.makeText(LoginUserActivity.this, "Login fallido", Toast.LENGTH_SHORT).show();
+                    Log.i("Login","Login fallido");
                 }else{
-                    //Login exitoso
-                    if(flagOpen){
+
+                    if(user.getId().equals("-")){
+                        //Cierre sesión
+                        Log.i("Login","Cierre sesión");
+                    }else{
+                        //Login exitoso
                         if(user.getProfile() == null){
                             Toast.makeText(LoginUserActivity.this, "Login exitoso, sin profile", Toast.LENGTH_SHORT).show();
                         }else{
                             Toast.makeText(LoginUserActivity.this, "Login exitoso, con profile", Toast.LENGTH_SHORT).show();
                         }
-                        //SessionManager.getInstance().StartSession(user);
-                        flagOpen = false;
+                        Log.i("Login","Login exitoso");
                         finish();
-                    }else{
-                        flagOpen = true;
                     }
                 }
             }
