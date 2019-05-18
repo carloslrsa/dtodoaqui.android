@@ -87,17 +87,6 @@ public class StepTwoFragment extends Fragment implements Step {
                 Log.i(TAG, "Place: " + place.getName() + ", " + place.getId());
                 selectedPlace = place;
 
-                for (AddressComponent a : selectedPlace.getAddressComponents().asList()) {
-                    if (a.getTypes().equals(Arrays.asList("locality", "political"))) {
-                        Log.i(TAG, "distrito " + a.getName());
-                    }
-                    //Log.i(TAG, a.getName() + " : " + a.getTypes());
-                }
-
-                Log.i(TAG, "direccion" + place.getAddress());
-                Log.i(TAG, "latitud : " + place.getLatLng().latitude);
-                Log.i(TAG, "longitud : " + place.getLatLng().longitude);
-
                 //Log.i(TAG, "es nulo la lon lat ? : " + (place.getLatLng() == null));
             }
 
@@ -135,7 +124,7 @@ public class StepTwoFragment extends Fragment implements Step {
         }
 
         if (ve == null) {
-
+            updateData();
         }
 
         return ve;
@@ -155,20 +144,25 @@ public class StepTwoFragment extends Fragment implements Step {
 
     public void updateData() {
 
-
-    }
-
-    public Bundle getData() {
         Bundle bundle = new Bundle();
 
         for (AddressComponent a : selectedPlace.getAddressComponents().asList()) {
             if (a.getTypes().equals(Arrays.asList("locality", "political"))) {
-                //Log.i(TAG, a.getName());
-
+                bundle.putString("district", a.getShortName());
+                Log.i(TAG, "distrito " + a.getName());
             }
-            Log.i(TAG, a.getName() + " : " + a.getTypes());
+            //Log.i(TAG, a.getName() + " : " + a.getTypes());
         }
 
-        return bundle;
+        Log.i(TAG, "direccion" + selectedPlace.getAddress());
+        Log.i(TAG, "latitud : " + selectedPlace.getLatLng().latitude);
+        Log.i(TAG, "longitud : " + selectedPlace.getLatLng().longitude);
+
+        bundle.putString("address", selectedPlace.getAddress());
+        bundle.putDouble("latitude", selectedPlace.getLatLng().latitude);
+        bundle.putDouble("longitude", selectedPlace.getLatLng().longitude);
+
+        ((RegisterEstablishmentActivity) getActivity()).loadData(bundle, RegisterEstablishmentActivity.STEP_TWO);
+
     }
 }

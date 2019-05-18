@@ -138,7 +138,17 @@ public class StepThreeFragment extends Fragment implements Step {
         if (fondoReal == null) {
             ve = new VerificationError(ERROR_FONDO);
         }
+
+        if (ve == null) {
+            loadData();
+        }
+
         return ve;
+    }
+
+    private void loadData() {
+
+        ((RegisterEstablishmentActivity) getActivity()).loadData(null, RegisterEstablishmentActivity.STEP_THREE);
     }
 
     @Override

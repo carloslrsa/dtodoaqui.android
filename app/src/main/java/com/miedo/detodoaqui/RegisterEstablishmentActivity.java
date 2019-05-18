@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.miedo.detodoaqui.Adapters.StepperAdapter;
+import com.miedo.detodoaqui.Data.Local.SessionManager;
 import com.stepstone.stepper.StepperLayout;
 import com.stepstone.stepper.VerificationError;
 
@@ -99,14 +100,31 @@ public class RegisterEstablishmentActivity extends AppCompatActivity implements 
                 case STEP_ONE:
 
                     finalJSONRequest.put("name", bundle.getString("nombre", "default name"));
+                    finalJSONRequest.put("slug", bundle.getString("nombre", "default slug"));
+
 
                     break;
                 case STEP_TWO:
+
+
+                    finalJSONRequest.put("district", bundle.getString("district"));
+                    finalJSONRequest.put("latitude", bundle.getDouble("latitude"));
+                    finalJSONRequest.put("longitude", bundle.getDouble("longitude"));
+                    finalJSONRequest.put("address", bundle.getString("address"));
+
                     break;
 
                 case STEP_THREE:
 
-
+                    finalJSONRequest.put("image_name", "gaa");
+                    finalJSONRequest.put("is_verified", false);
+                    finalJSONRequest.put("created", "2019-10-29T20:20:20Z");
+                    finalJSONRequest.put("modified", "2019-10-29T20:20:20Z");
+                    finalJSONRequest.put("inserted_at", "2019-10-29T20:20:20Z");
+                    finalJSONRequest.put("updated_at", "2019-10-29T20:20:20Z");
+                    finalJSONRequest.put("user_id", SessionManager.getInstance().getCurrentSession().getId());
+                    break;
+                case STEP_FOUR:
                     break;
 
 
