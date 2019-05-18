@@ -91,6 +91,9 @@ public class UserViewModel extends ViewModel {
                 userLogin.setValue(null);
             }
         });
+    }
+
+    private void getProfile(User user){
 
     }
 
@@ -122,7 +125,7 @@ public class UserViewModel extends ViewModel {
 
         try {
 
-            request.put("email", username);
+            request.put("username", username);
             request.put("password", password);
 
             retorno = request.toString();

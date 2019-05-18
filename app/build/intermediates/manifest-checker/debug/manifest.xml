@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.miedo.detodoaqui"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="28" />
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.miedo.detodoaqui.UpdateUserActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.miedo.detodoaqui.RegisterEstablishmentActivity" />
+        <activity android:name="com.miedo.detodoaqui.LoginUserActivity" />
+        <activity
+            android:name="com.miedo.detodoaqui.RegisterUserActivity"
+            android:label="@string/title_activity_register_user"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.miedo.detodoaqui.EstablishmentsActivity"
+            android:label="@string/title_activity_establishments"
+            android:parentActivityName="com.miedo.detodoaqui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.miedo.detodoaqui.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.miedo.detodoaqui.MainActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.miedo.detodoaqui.com.squareup.picasso"
+            android:exported="false" />
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.miedo.detodoaqui.lifecycle-process"
+            android:exported="false"
+            android:multiprocess="true" />
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="com.miedo.detodoaqui.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>

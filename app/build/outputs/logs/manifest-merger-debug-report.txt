@@ -1,5 +1,6 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:2:1-47:12
 INJECTED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:2:1-47:12
 INJECTED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:2:1-47:12
@@ -59,20 +60,87 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Billy\.gradle\ca
 INJECTED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:2:1-47:12
 INJECTED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:2:1-47:12
 INJECTED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:2:1-47:12
+=======
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
+MERGED from [androidx.navigation:navigation-fragment:2.1.0-alpha02] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\36e4a0bb71050ef32313434b3ffb3df2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-ui:2.1.0-alpha02] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\de97bb239327d0ebc0ea38eda393db66\AndroidManifest.xml:17:1-22:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\1de6955229944bd8b3bfb471e49560d8\AndroidManifest.xml:2:1-14:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0-alpha04] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\178a6a9a937e348f867b8548a2c7f88a\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\59581b82a01cbed68378eddf7ae783fa\AndroidManifest.xml:17:1-24:12
+MERGED from [com.stepstone.stepper:material-stepper:4.3.1] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\664d07dbae32cc62c2782cb0f1440171\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\9f00f57d2afc4ab83f8401a9323aad11\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\99c7567010a5e21b58b7346edcddac02\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\c84e573b26e4293190ce0078536d9ce8\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\54c65c2def7a253e51b33c4fba7044f9\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\df151263ab76d666fb22164f0e3fbbbe\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\8a7cbaaf5a9f1b96ea25cfa1d1c51ade\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\5f048798478902f4567ee1d9d7e26478\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android:flexbox:1.1.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\e10129d4f3d43a2bfbe610646412694a\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.fragment:fragment:1.1.0-alpha06] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\80463c577f7249f97956993378fad04b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.1.0-alpha02] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\9990336e9d4f46b64c8c49900b72869a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\72e193b96ef8a2b77376e9e1847921db\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\3c068d95e17f2fdfc78a6972183f891e\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.1.0-alpha04] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\25da6c943aee9c58c2156b4ff4fb4844\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\66cc2ed25eb356b94844bb4eee1e7576\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\2c636b8e25b4fb828cacb6f29f21dd01\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\db1e95d39715792bfc9a5d82db2cc585\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\9571c7c3b3d33c6ea6d185bc1034ce18\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\d782712755549fbe3428a71880620389\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\ef78403b466ab6846d43d3579471e1bb\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0-alpha06] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\0fb42c4b48cfa156f468ae86e99973b9\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common:2.1.0-alpha02] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\0e7978a8db411810f1eff3e022f84087\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\7d79e731df48ccbe924f1439ea6ace93\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\6c31f4f31ef9ca8db914365bd630200d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\679a9a62cc8187497b35e61e11a4221f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\345f8d8471e4b7e46aad6793734cdc5a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\ed2a5271f5a69ccef18c981612e09174\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\460dd67cb277509f0c4f475addd7b7de\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0-alpha05] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\4b858fab291236726bb5ea6d6d856fd5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0-alpha04] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\18544fa5b86c62acd3b4b8ca6d08754b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0-alpha04] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\4e3f0b1613c66c1bd604ccefe6c79e49\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0-alpha04] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\1e88610d719bad8aee44e9ecc0ba26fd\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0-alpha01] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\d5d2c0b29bec7bfc25a51c77e39ddbba\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0-alpha02] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\7a06a5ab6a1938e631fb6594f3ce55d8\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0-alpha04] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\7fa75f6a0be839c3732c1da0e1b967f2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\42868bc6df9244593c6505dfa90de9dd\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha02] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\38ed9e786c5d05ae833511e0b45eacbc\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\c1055ee67e162d7c04a5d09b02c4bb85\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\1ec2d97136b171ccf2731276d3e1abff\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\1cc2a3d482e1b94757aeff3e72000cca\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\696d3f8090a61b53e9762d487dc1ba31\AndroidManifest.xml:17:1-22:12
+INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
+>>>>>>> 16cf5acde76c1536876d6603d3fbb48d0ab1bd95
 	package
 		ADDED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:4:5-35
 		INJECTED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml
 	android:versionName
+<<<<<<< HEAD
 		INJECTED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:2:1-47:12
 		INJECTED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml
+=======
+		INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
+		INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml
+>>>>>>> 16cf5acde76c1536876d6603d3fbb48d0ab1bd95
 	xmlns:dist
 		ADDED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:3:5-61
 	android:versionCode
+<<<<<<< HEAD
 		INJECTED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:2:1-47:12
 		INJECTED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml
+=======
+		INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:2:1-48:12
+		INJECTED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml
+>>>>>>> 16cf5acde76c1536876d6603d3fbb48d0ab1bd95
 	xmlns:android
 		ADDED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:2:11-69
 dist:module
@@ -94,6 +162,7 @@ ADDED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\Andr
 	android:name
 		ADDED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:10:22-62
 application
+<<<<<<< HEAD
 ADDED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:12:5-45:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\a7e014e433edf1014322bc991f2987ba\AndroidManifest.xml:7:5-12:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\a7e014e433edf1014322bc991f2987ba\AndroidManifest.xml:7:5-12:19
@@ -123,6 +192,25 @@ MERGED from [androidx.core:core:1.1.0-alpha05] C:\Users\Billy\.gradle\caches\tra
 MERGED from [androidx.core:core:1.1.0-alpha05] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\cb842097c0b88c0d11e5b541d8eb40b2\AndroidManifest.xml:22:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha02] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\d8b50ebc5e0f63ccc60341b0f50309c5\AndroidManifest.xml:22:5-23:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha02] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\d8b50ebc5e0f63ccc60341b0f50309c5\AndroidManifest.xml:22:5-23:19
+=======
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:12:5-46:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\1de6955229944bd8b3bfb471e49560d8\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\1de6955229944bd8b3bfb471e49560d8\AndroidManifest.xml:7:5-12:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0-alpha04] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\178a6a9a937e348f867b8548a2c7f88a\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0-alpha04] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\178a6a9a937e348f867b8548a2c7f88a\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\59581b82a01cbed68378eddf7ae783fa\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\59581b82a01cbed68378eddf7ae783fa\AndroidManifest.xml:22:5-20
+MERGED from [com.stepstone.stepper:material-stepper:4.3.1] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\664d07dbae32cc62c2782cb0f1440171\AndroidManifest.xml:25:5-20
+MERGED from [com.stepstone.stepper:material-stepper:4.3.1] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\664d07dbae32cc62c2782cb0f1440171\AndroidManifest.xml:25:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\99c7567010a5e21b58b7346edcddac02\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\99c7567010a5e21b58b7346edcddac02\AndroidManifest.xml:9:5-20
+MERGED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\3c068d95e17f2fdfc78a6972183f891e\AndroidManifest.xml:22:5-28:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\3c068d95e17f2fdfc78a6972183f891e\AndroidManifest.xml:22:5-28:19
+MERGED from [androidx.core:core:1.1.0-alpha05] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\4b858fab291236726bb5ea6d6d856fd5\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.1.0-alpha05] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\4b858fab291236726bb5ea6d6d856fd5\AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha02] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\38ed9e786c5d05ae833511e0b45eacbc\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha02] C:\Users\CARLOS\.gradle\caches\transforms-2\files-2.1\38ed9e786c5d05ae833511e0b45eacbc\AndroidManifest.xml:22:5-23:19
+>>>>>>> 16cf5acde76c1536876d6603d3fbb48d0ab1bd95
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0-alpha05] C:\Users\Billy\.gradle\caches\transforms-2\files-2.1\cb842097c0b88c0d11e5b541d8eb40b2\AndroidManifest.xml:22:18-86
 	android:supportsRtl
@@ -138,10 +226,17 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-alpha02] C:\
 	android:theme
 		ADDED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:18:9-40
 activity#com.miedo.detodoaqui.UpdateUserActivity
+<<<<<<< HEAD
 ADDED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:19:9-65
+=======
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:19:9-20:66
+	android:windowSoftInputMode
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:20:13-54
+>>>>>>> 16cf5acde76c1536876d6603d3fbb48d0ab1bd95
 	android:name
 		ADDED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:19:19-53
 activity#com.miedo.detodoaqui.RegisterEstablishmentActivity
+<<<<<<< HEAD
 ADDED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:20:9-67
 	android:name
 		ADDED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:20:19-64
@@ -191,6 +286,57 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:42:17-77
 	android:name
 		ADDED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml:42:27-74
+=======
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:21:9-67
+	android:name
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:21:19-64
+activity#com.miedo.detodoaqui.LoginUserActivity
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:22:9-55
+	android:name
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:22:19-52
+activity#com.miedo.detodoaqui.RegisterUserActivity
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:23:9-26:59
+	android:label
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:25:13-65
+	android:theme
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:26:13-56
+	android:name
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:24:13-49
+activity#com.miedo.detodoaqui.EstablishmentsActivity
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:27:9-35:20
+	android:parentActivityName
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:30:13-55
+	android:label
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:29:13-66
+	android:theme
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:31:13-56
+	android:name
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:28:13-51
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:32:13-34:69
+	android:value
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:34:17-66
+	android:name
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:33:17-63
+activity#com.miedo.detodoaqui.MainActivity
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:36:9-45:20
+	android:label
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:38:13-45
+	android:windowSoftInputMode
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:39:13-54
+	android:name
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:37:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:40:13-44:29
+action#android.intent.action.MAIN
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:41:17-69
+	android:name
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:41:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:43:17-77
+	android:name
+		ADDED from E:\Proyectos\AndroidProjects\dtodoaqui\app\src\main\AndroidManifest.xml:43:27-74
+>>>>>>> 16cf5acde76c1536876d6603d3fbb48d0ab1bd95
 uses-sdk
 INJECTED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Billy\Documents\AndroidProjects\DeTodoAqui\app\src\main\AndroidManifest.xml
