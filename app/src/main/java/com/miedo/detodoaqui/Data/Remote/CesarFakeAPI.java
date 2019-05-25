@@ -39,4 +39,7 @@ public interface CesarFakeAPI {
     @GET("/api/search")
     public Call<ResponseBody> SearchEstablishments(@FieldMap Map<String, String> params);
 
+    @POST
+    public Call<ResponseBody> postEstablishment(@Body RequestBody body);
+
 }

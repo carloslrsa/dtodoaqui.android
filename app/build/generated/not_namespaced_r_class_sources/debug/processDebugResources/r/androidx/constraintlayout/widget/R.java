@@ -81,39 +81,12 @@ public final class R {
         public static final int packed = 0x7f0900ee;
         public static final int parent = 0x7f0900f0;
         public static final int percent = 0x7f0900f5;
-        public static final int right = 0x7f090116;
-        public static final int spread = 0x7f090143;
-        public static final int spread_inside = 0x7f090144;
-        public static final int start = 0x7f090149;
-        public static final int top = 0x7f090176;
-        public static final int wrap = 0x7f09018f;
-<<<<<<< HEAD
-=======
-=======
-        public static final int end = 0x7f090083;
-        public static final int gone = 0x7f09009c;
-        public static final int invisible = 0x7f0900a9;
-        public static final int left = 0x7f0900b3;
-        public static final int packed = 0x7f0900eb;
-        public static final int parent = 0x7f0900ed;
-        public static final int percent = 0x7f0900f2;
-<<<<<<< HEAD
-        public static final int right = 0x7f090113;
-        public static final int spread = 0x7f090140;
-        public static final int spread_inside = 0x7f090141;
-        public static final int start = 0x7f090146;
-        public static final int top = 0x7f090174;
-        public static final int wrap = 0x7f09018c;
-=======
-        public static final int right = 0x7f090111;
-        public static final int spread = 0x7f09013e;
-        public static final int spread_inside = 0x7f09013f;
-        public static final int start = 0x7f090144;
-        public static final int top = 0x7f090171;
-        public static final int wrap = 0x7f090189;
->>>>>>> cb7e8adcf0fc175e5ab1a0d0027200a195abc129
->>>>>>> ceaf72b048ba797b7206fa2d18ae703e34e73d28
->>>>>>> 0b1c21d610b16dd76436dcbbc6d28218c716ad7e
+        public static final int right = 0x7f090118;
+        public static final int spread = 0x7f090145;
+        public static final int spread_inside = 0x7f090146;
+        public static final int start = 0x7f09014b;
+        public static final int top = 0x7f090179;
+        public static final int wrap = 0x7f090192;
     }
     public static final class styleable {
         private styleable() {}

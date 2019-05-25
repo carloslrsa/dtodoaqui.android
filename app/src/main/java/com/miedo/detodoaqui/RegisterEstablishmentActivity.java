@@ -10,11 +10,20 @@ import android.widget.Toast;
 
 import com.miedo.detodoaqui.Adapters.StepperAdapter;
 import com.miedo.detodoaqui.Data.Local.SessionManager;
+import com.miedo.detodoaqui.Data.Remote.CesarFakeAPI;
+import com.miedo.detodoaqui.Data.Remote.ServiceGenerator;
 import com.stepstone.stepper.StepperLayout;
 import com.stepstone.stepper.VerificationError;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class RegisterEstablishmentActivity extends AppCompatActivity implements StepperLayout.StepperListener {
 
@@ -45,6 +54,36 @@ public class RegisterEstablishmentActivity extends AppCompatActivity implements 
     @Override
     public void onCompleted(View completeButton) {
         Toast.makeText(this, "onCompleted!", Toast.LENGTH_SHORT).show();
+
+        JSONObject jsonRequest = new JSONObject();
+        try {
+            jsonRequest.put("location", finalJSONRequest);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        // Creamos el objeto RequestBody con el jsonRequest
+        RequestBody body = RequestBody.create(MediaType.parse("application/json"), jsonRequest.toString());
+
+        CesarFakeAPI api = ServiceGenerator.createServiceScalar(CesarFakeAPI.class);
+
+        Call<ResponseBody> call = api.postEstablishment(body);
+
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                if (response.code() == 201) {
+                    Toast.makeText(RegisterEstablishmentActivity.this, "Establecimiento registrado", Toast.LENGTH_LONG).show();
+                    finish();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Toast.makeText(RegisterEstablishmentActivity.this, "Error", Toast.LENGTH_LONG).show();
+
+            }
+        });
 
 
         // Hacer la peticion a la api
